@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Class
 class CustomCell: UITableViewCell {
     @IBOutlet  var myImage : UIImageView!
     @IBOutlet  var titleLabel: UILabel!
