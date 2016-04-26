@@ -30,13 +30,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KNO-AT-YA1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="112"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="112" id="Skz-gZ-ODx"/>
-                                                        <constraint firstAttribute="width" constant="150" id="vkW-ba-SiP"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-BL-SGO">
                                                     <rect key="frame" x="180" y="18" width="38" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -49,6 +42,13 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KNO-AT-YA1">
+                                                    <rect key="frame" x="36" y="8" width="150" height="112"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="112" id="Skz-gZ-ODx"/>
+                                                        <constraint firstAttribute="width" constant="150" id="vkW-ba-SiP"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KNO-AT-YA1" firstAttribute="top" secondItem="1UV-g8-1eF" secondAttribute="top" id="2Yw-vU-5VG"/>
