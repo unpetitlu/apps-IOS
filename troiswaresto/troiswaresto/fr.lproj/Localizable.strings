@@ -1,0 +1,11 @@
+/* 
+  Localize.strings
+  troiswaresto
+
+  Created by etudiant-02 on 06/05/2016.
+  Copyright © 2016 ludo. All rights reserved.
+*/
+
+"Hello" = "Bonjour tout le monde";
+
+"main.button.back" = "< retour";

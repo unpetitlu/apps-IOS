@@ -13,10 +13,30 @@ class MapViewController: UIViewController {
 
     @IBOutlet var mapView : MKMapView!
     
+    
+    // Ajout de IBOutlet optionnel car il existe uniquement sur la map permettant d'ajouter un resto
+    @IBOutlet var addressLabel : UILabel?
+    @IBOutlet var addRestoButton: UIButton?
+    
+    
     var allRestos = [Resto]()
+    var selectedRestoInMap : Resto!
+    
+    // Permet de savoir sur quel map on se trouve
+    var screenType = ScreenType.AllRestos
     
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 450
+    
+    @IBAction func backButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func buttonCenterGeolocPressed() {
+        showUserLocation()
+        //Pour centrer la carte sur la position du user
+        mapView.setCenterCoordinate(mapView.userLocation.coordinate, animated: true)
+    }
     
     
     func addPin(name: String, location: CLLocation, resto : Resto, type: pinType) {
@@ -27,23 +47,106 @@ class MapViewController: UIViewController {
     func loadAllPin() {
         mapView.removeAnnotations(mapView.annotations)
         
+        // Récupère la position de la map
+        //let mapCenterPosition = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+        
         for index in allRestos
         {
+            // Rajouter ce if si l'on souhaite afficher uniquement les restos dans un rayon donné
+            /*
+            if mapCenterPosition.distanceFromLocation(station.position) <= (regionRadius*2) {
+                addPin(pinType, myStation: station)
+            }
+            */
+            
+            
             addPin(index.name, location: index.position, resto: index, type: pinType.StandardResto)
         }
+        
+        showUserLocation()
+        
+        if screenType == .OneResto {
+            // affiche la petite bulle lorsqu'on a qu'un seul resto
+            mapView.selectAnnotation(mapView.annotations[0], animated: true)
+        }
     }
+    
+    
+    // MARK: - Map pour ajouter un resto
+    func getAdressFromLocation (location : CLLocation, completion:(String)->Void ) {
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) in
+            var output = ""
+            if (error != nil) {
+                logError("Reverse geocoder failed with error" + error!.localizedDescription)
+                output = "error"
+            } else {
+                
+                if placemarks!.count > 0 {
+                    let pm = placemarks![0] as CLPlacemark
+                    if pm.thoroughfare != nil && pm.subThoroughfare != nil {
+                        output =  pm.subThoroughfare! + " " + pm.thoroughfare!
+                    } else {
+                        output = ""
+                    }
+                } else {
+                    output = "error"
+                }
+            }
+            completion(output)
+        })
+    }
+    
+    func updateAddressLabel() {
+        let centerCoordinates = mapView.centerCoordinate
+        
+        let location = CLLocation(latitude: centerCoordinates.latitude, longitude: centerCoordinates.longitude)
+        
+        getAdressFromLocation(location) {(address) in
+            self.addressLabel?.text = address
+            self.addressLabel?.hidden = false
+        }
+    }
+    
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        logDebug("region did change")
+        //addPins()//à voir
+        
+        updateAddressLabel()
+        
+    }
+    // MARK: -
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadAllPin()
         
-        showUserLocation()
+        
+        // Uniquement pour la map qui permet d'ajouter un resto
+        self.addressLabel?.hidden = false
+        updateAddressLabel()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toRestoInfoFromMap")
+        {
+            let mydestination: DetailViewController = segue.destinationViewController as! DetailViewController
+            mydestination.resto = selectedRestoInMap // pour récupérer un resto
+            //mydestination.restosViewController = self// JE SUIS TON PERE (dit le RestosVC au RestoDetailVC)
+        } else if segue.identifier == "toaddresto" {
+            let mydestination: AddRestoViewController = segue.destinationViewController as! AddRestoViewController
+            mydestination.newRestoAdress = (addressLabel?.text)!
+
+            let centerCoordinates = mapView.centerCoordinate
+            let location = CLLocation(latitude: centerCoordinates.latitude, longitude: centerCoordinates.longitude)
+            mydestination.newRestoPosition = location
+        }
     }
     
     
@@ -60,12 +163,17 @@ class MapViewController: UIViewController {
     
     // cette fonction écoute le changement de position du user
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        logDebug("did update location")
 
         if let locationUser = manager.location {
-            centerMapOnLocation(locationUser)
             
-            locationManager.stopUpdatingLocation()
+            //Si je viens de la page detail d'un resto alors je me centre sur celui-ci au lieu de me centrer sur l'utilisateur
+            if screenType == .OneResto {
+                centerMapOnLocation(allRestos[0].position)
+            } else {
+                centerMapOnLocation(locationUser)
+            }
+            
+            locationManager.stopUpdatingLocation() // Stop l'écoute
             
             // lancer la requete pour obtenir les restos
         }
@@ -135,6 +243,16 @@ extension MapViewController : MKMapViewDelegate, CLLocationManagerDelegate {
     // When i click on tooltip
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
+        
+        // Récupération du resto sur lequel on clique pour rediriger vers le detail
+        // Si on vient déjà du detail on ne le fais pas
+        
+        if screenType != .OneResto {
+            let myPinResto = view.annotation as! Pin
+            selectedRestoInMap = myPinResto.resto
+            self.performSegueWithIdentifier("toRestoInfoFromMap", sender: self)
+        }
+        
         /*
         let myStationPin = view.annotation as! Pin
         

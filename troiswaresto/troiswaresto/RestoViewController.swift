@@ -8,11 +8,14 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class RestoViewController: UIViewController {
 
     @IBOutlet var restoTableView : UITableView!
     var refreshControl: UIRefreshControl!
+    
+    @IBOutlet var backButton: UIButton!
     
     var restos = [Resto]()
     
@@ -20,7 +23,33 @@ class RestoViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func listenerFirebase() {
+        let rootRefFirebase = Firebase(url:"https://glaring-heat-4854.firebaseio.com")
+        rootRefFirebase.observeEventType(.Value, withBlock: { snapshot in
+            //print("\(snapshot.key) -> \(snapshot.value)")
+            
+            // update en live ci-dessous
+            //self.updateDisplay()
+        })
+    }
+    
     func updateDisplay() {
+        
+        // Récupération des restos en utilisant Firebase
+        getRestosInfoWithFirebase(restoTableView) { (restosReceived: [Resto]) in
+            self.restos = restosReceived
+            self.restoTableView.reloadData()
+        }
+
+        // Récupération des restos en utilisant une requête en json vers Firebase
+        /*
+        getRestosInfo() { (restosReceived: [Resto]) in
+            self.restos = restosReceived
+            self.restoTableView.reloadData()
+        }
+        */
+        
+        /* Création à la main des restos
         restos = [Resto]()
         let fakeResto = Resto(restoId: "1", name: "Le Serbe", position: CLLocation(latitude: 48.893741, longitude: 2.350840))
         fakeResto.priceRange = PriceRange.Low
@@ -35,6 +64,7 @@ class RestoViewController: UIViewController {
         fakeResto2.reviews.append(fakeReview2)
         
         restos.append(fakeResto2)
+        */
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -43,19 +73,35 @@ class RestoViewController: UIViewController {
             // on obtient une référence vers le ViewController de destination qui se trouve être un DetailViewController
             let mydestination: DetailViewController =  segue.destinationViewController as! DetailViewController
             
-            // on passe à la destination une référence vers le movie qui a été choisi
+            // on passe à la destination une référence vers le resto qui a été choisi
             // l'index de la ligne selectionnée est myTableView.indexPathForSelectedRow!.row
             mydestination.resto = restos[restoTableView.indexPathForSelectedRow!.row]
-        } else if (segue.identifier == "tomap") {
+        } else if (segue.identifier == "tomapfromresto") {
+            
+            // on obtient une référence vers le ViewController de destination qui se trouve être un MapViewController
             let mydestination: MapViewController =  segue.destinationViewController as! MapViewController
+            
+            // on passe à la destination une référence vers tous les restos
             mydestination.allRestos = restos
+        } else if segue.identifier == "tomapforaddresto"{
+    
+            let wayToMap: MapViewController = segue.destinationViewController as! MapViewController
+            wayToMap.allRestos = self.restos
+            wayToMap.screenType = .AddResto
+    
         }
     }
     
+    func translateText() {
+        backButton.setTitle("main.button.back".translate, forState: .Normal)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        updateDisplay()
+        
+        translateText()
+        
+        //listenerFirebase()
         
         refreshControl = UIRefreshControl()
         
@@ -65,6 +111,12 @@ class RestoViewController: UIViewController {
         //  refreshControl.attributedTitle.attr
         refreshControl.addTarget(self, action: #selector(RestoViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         restoTableView.addSubview(self.refreshControl) // not required when using UITableViewController
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateDisplay()
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,6 +162,7 @@ extension RestoViewController : UITableViewDelegate, UITableViewDataSource {
         */
         
         cell.titleLabel.text = restos[indexPath.row].name
+
         if restos[indexPath.row].image != nil {
             cell.myImage.image = restos[indexPath.row].image
         } else {
@@ -131,7 +184,7 @@ extension RestoViewController : UITableViewDelegate, UITableViewDataSource {
             cell.priceLabel.text = ""
         }
         
-        cell.rateLabel.text = "\(restos[indexPath.row].rating)"
+        cell.rateLabel.text = "\(restos[indexPath.row].rating.roundToPlaces(2))"
         //cell.positionLabel.text = "\(restos[indexPath.row].address)"
         
         return cell
@@ -188,7 +241,11 @@ extension RestoViewController : UITableViewDelegate, UITableViewDataSource {
         // delete. Noter le .Desctructive dans le style qui donne automatiquement la couleur rouge
         let delete = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete") { action, index in
             print("Delete button tapped")
+            
+            deleteRestoToFireBase(self.restos[indexPath.row].restoId)
+            
             self.restos.removeAtIndex(indexPath.row)
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
         }

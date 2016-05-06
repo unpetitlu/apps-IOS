@@ -10,9 +10,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBAction func backButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Test de la localisation
+        NSLog(NSLocalizedString("Hello", comment: "Permet de dire bonjour"))
     }
 
     override func didReceiveMemoryWarning() {

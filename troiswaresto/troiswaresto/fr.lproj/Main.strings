@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "3w Restos"; ObjectID = "1zl-kq-3sX"; */
+"1zl-kq-3sX.text" = "3w Restos";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4x3-kL-y7P"; */
+"4x3-kL-y7P.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "< Retour"; ObjectID = "5NA-di-HKd"; */
+"5NA-di-HKd.normalTitle" = "< Retour";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "6WA-ZM-vs9"; */
+"6WA-ZM-vs9.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9de-Ds-mio"; */
+"9de-Ds-mio.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BOW-Rd-thx"; */
+"BOW-Rd-thx.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "Dmb-uR-o1A"; */
+"Dmb-uR-o1A.normalTitle" = "Add";
+
+/* Class = "UITextField"; placeholder = "auteur"; ObjectID = "FB6-qf-I8z"; */
+"FB6-qf-I8z.placeholder" = "auteur";
+
+/* Class = "UIButton"; normalTitle = "< Retour"; ObjectID = "IFa-3Z-bce"; */
+"IFa-3Z-bce.normalTitle" = "< Retour";
+
+/* Class = "UILabel"; text = "+"; ObjectID = "JgK-5l-tBj"; */
+"JgK-5l-tBj.text" = "+";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MAD-h6-Igf"; */
+"MAD-h6-Igf.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "MH0-pp-Ys3"; */
+"MH0-pp-Ys3.normalTitle" = "+";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NCg-YG-rtj"; */
+"NCg-YG-rtj.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pl6-ay-rRs"; */
+"Pl6-ay-rRs.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SR5-1V-ST3"; */
+"SR5-1V-ST3.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "< back"; ObjectID = "TTS-8r-Z0n"; */
+"TTS-8r-Z0n.normalTitle" = "< back";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "U70-Ys-9lR"; */
+"U70-Ys-9lR.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WbU-2E-iIL"; */
+"WbU-2E-iIL.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "< Retour"; ObjectID = "Xsz-KD-zED"; */
+"Xsz-KD-zED.normalTitle" = "< Retour";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmoddeserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "d4e-7K-E7z"; */
+"d4e-7K-E7z.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmoddeserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "< Retour"; ObjectID = "e5L-CK-IFw"; */
+"e5L-CK-IFw.normalTitle" = "< Retour";
+
+/* Class = "UIButton"; normalTitle = "< Retour"; ObjectID = "gKG-wc-95p"; */
+"gKG-wc-95p.normalTitle" = "< Retour";
+
+/* Class = "UIButton"; normalTitle = "Ajouter une image"; ObjectID = "l9r-gx-dd0"; */
+"l9r-gx-dd0.normalTitle" = "Ajouter une image";
+
+/* Class = "UIButton"; normalTitle = "Restos"; ObjectID = "nWL-tc-dGB"; */
+"nWL-tc-dGB.normalTitle" = "Restos";
+
+/* Class = "UIButton"; normalTitle = "Ajouter un resto"; ObjectID = "pbD-M4-js5"; */
+"pbD-M4-js5.normalTitle" = "Ajouter un resto";
+
+/* Class = "UITextField"; placeholder = "Nom du resto"; ObjectID = "qVw-ll-pc9"; */
+"qVw-ll-pc9.placeholder" = "Nom du resto";
+
+/* Class = "UILabel"; text = "Adresse :"; ObjectID = "s1i-RE-y7c"; */
+"s1i-RE-y7c.text" = "Adresse :";
+
+/* Class = "UISegmentedControl"; ssZ-26-dsR.segmentTitles[0] = "Distance"; ObjectID = "ssZ-26-dsR"; */
+"ssZ-26-dsR.segmentTitles[0]" = "Distance";
+
+/* Class = "UISegmentedControl"; ssZ-26-dsR.segmentTitles[1] = "Note"; ObjectID = "ssZ-26-dsR"; */
+"ssZ-26-dsR.segmentTitles[1]" = "Note";
+
+/* Class = "UISegmentedControl"; ssZ-26-dsR.segmentTitles[2] = "Prix"; ObjectID = "ssZ-26-dsR"; */
+"ssZ-26-dsR.segmentTitles[2]" = "Prix";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "t1O-v8-hIG"; */
+"t1O-v8-hIG.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "t6U-iL-XI2"; */
+"t6U-iL-XI2.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "commentaire"; ObjectID = "tIv-G6-9bu"; */
+"tIv-G6-9bu.placeholder" = "commentaire";
+
+/* Class = "UIButton"; normalTitle = "Social"; ObjectID = "tjD-Qh-uNS"; */
+"tjD-Qh-uNS.normalTitle" = "Social";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yhh-lX-ycZ"; */
+"yhh-lX-ycZ.text" = "Label";

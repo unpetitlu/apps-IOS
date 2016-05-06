@@ -48,11 +48,28 @@ class DetailViewController: UIViewController {
             restoPriceLabel.text = ""
         }
         
-        restoRateLabel.text = "\(resto.rating)"
+        restoRateLabel.text = "\(resto.rating.roundToPlaces(2))"
         restoPositionLabel.text = ""
         restoDescriptionText.text = "Bonjour"
         
         restoDetailTableView.reloadData()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "tomapfromrestodetail")
+        {
+            // on obtient une référence vers le ViewController de destination qui se trouve être un MapViewController
+            let mydestination: MapViewController =  segue.destinationViewController as! MapViewController
+            
+            // J'envoi dans le tableau de tous les restos uniquement le resto sur lequel je me trouve
+            mydestination.allRestos.append(resto)
+            mydestination.screenType = ScreenType.OneResto
+            
+        } else if segue.identifier == "addreview" {
+            let mydestination: ReviewViewController =  segue.destinationViewController as! ReviewViewController
+            mydestination.resto = resto
+        }
     }
     
     override func viewDidLoad() {
@@ -88,13 +105,22 @@ extension DetailViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // A modifier, retourner le nombre de ligne dans la section
-        return resto.reviews.count
+        
+        // avant : return resto.reviews.count
+        
+        // après. Le + 1 permet d'ajouter une ligne en plus afin d'ajouter la ligne avec le +
+        return resto.reviews.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if indexPath.row == resto.reviews.count {
+            return tableView.dequeueReusableCellWithIdentifier("restoDetailAddReview", forIndexPath: indexPath) as! AddReviewCell
+        }
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("restoDetailCustomCell", forIndexPath: indexPath) as! ReviewCustomCell
         // Ajouter la logique d'affichage du texte dans la cellule de la TableView
-
+        
         cell.rateLabel.text = "\(resto.reviews[indexPath.row].rate)"
         if let author = resto.reviews[indexPath.row].nickname {
             cell.authorLabel.text = author
@@ -112,6 +138,10 @@ extension DetailViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == resto.reviews.count {
+            performSegueWithIdentifier("addreview", sender: self)
+        }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }

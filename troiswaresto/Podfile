@@ -1,0 +1,16 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'troiswaresto' do
+  #Alamofire permet de faire des requêtes
+  pod 'Alamofire', '~> 3.3'
+
+  #SwiftyJSON permet de manipuler facilement le json
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+
+  #Flurry permet de faire de l'analytic
+  pod 'Flurry-iOS-SDK/FlurrySDK'
+
+  #Firebase permet de faire du nosql
+  pod 'Firebase', '>= 2.5.1'
+end

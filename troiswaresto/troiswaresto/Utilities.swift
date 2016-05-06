@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 // MARK: - Log --------------------
 let TESTVERSION = true
@@ -161,13 +162,6 @@ func isIpad()->Bool {
     return UIDevice.currentDevice().userInterfaceIdiom == .Pad
 }
 
-extension Int {
-    var secondsToTime : String {
-        return String(format: "%02d:%02d", self / 60, self % 60)
-        //"\(self/60):\(self % 60)"
-    }
-}
-
 //from defined languages in localisation, "en" as default
 func getUserLanguage()->String {
     let displayNameString = NSLocale.preferredLanguages()[0]
@@ -186,4 +180,111 @@ func getUserLanguage()->String {
     if (displayNameString.rangeOfString("en-GB") != nil) { output = "en-GB" }
     
     return output
+}
+
+
+/**
+ Récupère une image dans une url donnée
+ 
+ Fonction **synchrone**.
+ 
+ Renvoie nil en cas d'erreur
+ */
+func getImageFromURL(fileURL: String)->UIImage? {
+    print("loading remote image:\(fileURL)")
+    
+    if let myurl = NSURL(string: fileURL) {
+        if let mydata = NSData(contentsOfURL: myurl) {
+            if let result = UIImage(data: mydata) {
+                return result
+            } else {
+                logWarning("pb pour convertir en UIImage pour fileUrl=\(fileURL)")
+                return nil
+            }
+        } else {
+            logWarning("pb pour convertir en NSData pour fileUrl=\(fileURL)")
+            return nil
+        }
+    } else {
+        logWarning("error: not a valid url for:\(fileURL)")
+        return nil
+    }
+}
+
+
+// MARK: - Analytics
+func sendAnalyticsEvent(name : String, parameters : [String : String]?) {
+    
+    // dictionnaire vide qui va contenir les paramètres
+    var params = [String:String]()
+    
+    // si paramaters est non vide, je le recopie dans params
+    if parameters != nil {
+        params = parameters!
+    }
+    
+    // J'ajoute des paramètres standard que je vais retrouver dans tous les events
+    params["landscape"] = isLandscape() ? "YES" : "NO"
+    params["device"] = getDevice()
+    params["langage"] = getUserLanguage()
+    
+    Flurry.logEvent(name, withParameters: params)
+}
+
+// MARK: - Simple alert
+func simpleAlert(title: String, message: String, view: UIViewController) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+    
+    let OKAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+    alertController.addAction(OKAction)
+    
+    view.presentViewController(alertController, animated: true, completion: nil)
+}
+
+
+func simpleAlert(title: String, message: String, view: UIViewController, successHandler: ()->(), cancelHandler: ()->() ) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+    
+    let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+        successHandler()
+    }
+    alertController.addAction(okAction)
+    
+    let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (action) in
+        cancelHandler()
+    }
+    alertController.addAction(cancelAction)
+    
+    view.presentViewController(alertController, animated: true, completion: nil)
+}
+
+// MARK: - Extensions
+extension Int {
+    var secondsToTime : String {
+        return String(format: "%02d:%02d", self / 60, self % 60)
+        //"\(self/60):\(self % 60)"
+    }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundToPlaces(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return round(self * divisor) / divisor
+    }
+}
+
+extension String {
+    var translate :String {
+        return NSLocalizedString(self, comment: "")
+    }
+    
+    
+    func trimBefore(needle: String)->String {
+        var output = self
+        if let position = self.rangeOfString(needle) {
+            output.removeRange(self.startIndex..<position.endIndex)
+        }
+        return output
+    }
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C03DEE2C1CD0C5920094FBAB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DEE2B1CD0C5920094FBAB /* Model.swift */; };
+		C03DEE2F1CD0C5D90094FBAB /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03DEE2E1CD0C5D90094FBAB /* Parameters.swift */; };
+		C07BD9701CDC9C1200918F74 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C07BD9721CDC9C1200918F74 /* Localizable.strings */; };
+		C07BD9751CDCD40B00918F74 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BD9741CDCD40B00918F74 /* WelcomeViewController.swift */; };
+		C07BD9771CDCD4D500918F74 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BD9761CDCD4D500918F74 /* CreateProfileViewController.swift */; };
+		C07BD9791CDCD4E100918F74 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07BD9781CDCD4E100918F74 /* ConnectViewController.swift */; };
 		C083E0511CCE47DE003E0665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083E0501CCE47DE003E0665 /* AppDelegate.swift */; };
 		C083E0531CCE47DE003E0665 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083E0521CCE47DE003E0665 /* MainViewController.swift */; };
 		C083E0561CCE47DE003E0665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C083E0541CCE47DE003E0665 /* Main.storyboard */; };
@@ -25,6 +31,11 @@
 		C083E0931CCE710B003E0665 /* ReviewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083E0921CCE710B003E0665 /* ReviewCustomCell.swift */; };
 		C0A273161CCFB4A600D5A0AE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A273151CCFB4A600D5A0AE /* MapViewController.swift */; };
 		C0A273181CCFB5D700D5A0AE /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A273171CCFB5D700D5A0AE /* Pin.swift */; };
+		C0ABF8141CD9F5E900DB4628 /* AddRestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ABF8131CD9F5E900DB4628 /* AddRestoViewController.swift */; };
+		C0ABF81A1CDC956C00DB4628 /* imageen.png in Resources */ = {isa = PBXBuildFile; fileRef = C0ABF81C1CDC956C00DB4628 /* imageen.png */; };
+		C0BC7BFB1CD247DC00E6F9B2 /* AddReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */; };
+		C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */; };
+		DFD8675A07BD365AF7B0CC45 /* Pods_troiswaresto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB34ABA32659753A651D9592 /* Pods_troiswaresto.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DAF7D0D4E75885AA63C884B /* Pods-troiswaresto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswaresto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto.debug.xcconfig"; sourceTree = "<group>"; };
+		AB34ABA32659753A651D9592 /* Pods_troiswaresto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_troiswaresto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03DEE2B1CD0C5920094FBAB /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C03DEE2E1CD0C5D90094FBAB /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		C07BD9711CDC9C1200918F74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C07BD9731CDC9C1300918F74 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C07BD9741CDCD40B00918F74 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C07BD9761CDCD4D500918F74 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		C07BD9781CDCD4E100918F74 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		C083E04D1CCE47DE003E0665 /* troiswaresto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = troiswaresto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C083E0501CCE47DE003E0665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C083E0521CCE47DE003E0665 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +89,14 @@
 		C083E0921CCE710B003E0665 /* ReviewCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCustomCell.swift; sourceTree = "<group>"; };
 		C0A273151CCFB4A600D5A0AE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C0A273171CCFB5D700D5A0AE /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		C0ABF8131CD9F5E900DB4628 /* AddRestoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestoViewController.swift; sourceTree = "<group>"; };
+		C0ABF8151CDC94C300DB4628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		C0ABF8161CDC94C300DB4628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C0ABF81B1CDC956C00DB4628 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/imageen.png; sourceTree = "<group>"; };
+		C0ABF81D1CDC95CA00DB4628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/imageen.png; sourceTree = "<group>"; };
+		C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewCell.swift; sourceTree = "<group>"; };
+		C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswaresto.release.xcconfig"; path = "Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD8675A07BD365AF7B0CC45 /* Pods_troiswaresto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +125,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DFE3DD56851D7353572C47C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB34ABA32659753A651D9592 /* Pods_troiswaresto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64573E00380F0CF0C26B737B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DAF7D0D4E75885AA63C884B /* Pods-troiswaresto.debug.xcconfig */,
+				F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C03DEE2D1CD0C5C80094FBAB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C03DEE2E1CD0C5D90094FBAB /* Parameters.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		C083E0441CCE47DE003E0665 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +157,8 @@
 				C083E0671CCE47DE003E0665 /* troiswarestoTests */,
 				C083E0721CCE47DE003E0665 /* troiswarestoUITests */,
 				C083E04E1CCE47DE003E0665 /* Products */,
+				64573E00380F0CF0C26B737B /* Pods */,
+				2DFE3DD56851D7353572C47C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +175,9 @@
 		C083E04F1CCE47DE003E0665 /* troiswaresto */ = {
 			isa = PBXGroup;
 			children = (
+				C07BD9721CDC9C1200918F74 /* Localizable.strings */,
+				C0ABF8171CDC955100DB4628 /* images */,
+				C03DEE2D1CD0C5C80094FBAB /* Config */,
 				C0A273141CCFAFF900D5A0AE /* View */,
 				C083E08F1CCE657A003E0665 /* Controller */,
 				C083E0871CCE4855003E0665 /* Utilities.swift */,
@@ -158,6 +217,7 @@
 				C083E0821CCE4819003E0665 /* Resto.swift */,
 				C083E0841CCE482A003E0665 /* Review.swift */,
 				C083E0891CCE4B31003E0665 /* User.swift */,
+				C03DEE2B1CD0C5920094FBAB /* Model.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,6 +229,11 @@
 				C083E08B1CCE534B003E0665 /* RestoViewController.swift */,
 				C083E0901CCE6593003E0665 /* DetailViewController.swift */,
 				C0A273151CCFB4A600D5A0AE /* MapViewController.swift */,
+				C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */,
+				C0ABF8131CD9F5E900DB4628 /* AddRestoViewController.swift */,
+				C07BD9741CDCD40B00918F74 /* WelcomeViewController.swift */,
+				C07BD9761CDCD4D500918F74 /* CreateProfileViewController.swift */,
+				C07BD9781CDCD4E100918F74 /* ConnectViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -178,8 +243,17 @@
 			children = (
 				C083E08D1CCE55E4003E0665 /* CustomCell.swift */,
 				C083E0921CCE710B003E0665 /* ReviewCustomCell.swift */,
+				C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C0ABF8171CDC955100DB4628 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C0ABF81C1CDC956C00DB4628 /* imageen.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C083E0781CCE47DE003E0665 /* Build configuration list for PBXNativeTarget "troiswaresto" */;
 			buildPhases = (
+				7F132DF68EF6539EBDBAC2B2 /* Check Pods Manifest.lock */,
 				C083E0491CCE47DE003E0665 /* Sources */,
 				C083E04A1CCE47DE003E0665 /* Frameworks */,
 				C083E04B1CCE47DE003E0665 /* Resources */,
+				A61D75CFACE30AA0F62AFF50 /* Embed Pods Frameworks */,
+				339F9DC7B8CFA946C95ED793 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +345,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = C083E0441CCE47DE003E0665;
 			productRefGroup = C083E04E1CCE47DE003E0665 /* Products */;
@@ -286,6 +364,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07BD9701CDC9C1200918F74 /* Localizable.strings in Resources */,
+				C0ABF81A1CDC956C00DB4628 /* imageen.png in Resources */,
 				C083E05E1CCE47DE003E0665 /* LaunchScreen.storyboard in Resources */,
 				C083E05B1CCE47DE003E0665 /* Assets.xcassets in Resources */,
 				C083E0561CCE47DE003E0665 /* Main.storyboard in Resources */,
@@ -308,24 +388,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		339F9DC7B8CFA946C95ED793 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F132DF68EF6539EBDBAC2B2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A61D75CFACE30AA0F62AFF50 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C083E0491CCE47DE003E0665 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07BD9791CDCD4E100918F74 /* ConnectViewController.swift in Sources */,
 				C083E0931CCE710B003E0665 /* ReviewCustomCell.swift in Sources */,
 				C083E08C1CCE534B003E0665 /* RestoViewController.swift in Sources */,
 				C083E0881CCE4855003E0665 /* Utilities.swift in Sources */,
 				C083E0851CCE482A003E0665 /* Review.swift in Sources */,
+				C0ABF8141CD9F5E900DB4628 /* AddRestoViewController.swift in Sources */,
 				C083E0531CCE47DE003E0665 /* MainViewController.swift in Sources */,
+				C03DEE2F1CD0C5D90094FBAB /* Parameters.swift in Sources */,
 				C083E08E1CCE55E4003E0665 /* CustomCell.swift in Sources */,
+				C07BD9771CDCD4D500918F74 /* CreateProfileViewController.swift in Sources */,
 				C0A273181CCFB5D700D5A0AE /* Pin.swift in Sources */,
+				C03DEE2C1CD0C5920094FBAB /* Model.swift in Sources */,
+				C0BC7BFB1CD247DC00E6F9B2 /* AddReviewCell.swift in Sources */,
 				C083E0591CCE47DE003E0665 /* troiswaresto.xcdatamodeld in Sources */,
 				C0A273161CCFB4A600D5A0AE /* MapViewController.swift in Sources */,
 				C083E08A1CCE4B31003E0665 /* User.swift in Sources */,
 				C083E0911CCE6593003E0665 /* DetailViewController.swift in Sources */,
+				C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */,
 				C083E0511CCE47DE003E0665 /* AppDelegate.swift in Sources */,
 				C083E0831CCE4819003E0665 /* Resto.swift in Sources */,
+				C07BD9751CDCD40B00918F74 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,10 +497,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C07BD9721CDC9C1200918F74 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C07BD9711CDC9C1200918F74 /* en */,
+				C07BD9731CDC9C1300918F74 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C083E0541CCE47DE003E0665 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C083E0551CCE47DE003E0665 /* Base */,
+				C0ABF8151CDC94C300DB4628 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -373,8 +519,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				C083E05D1CCE47DE003E0665 /* Base */,
+				C0ABF8161CDC94C300DB4628 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C0ABF81C1CDC956C00DB4628 /* imageen.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0ABF81B1CDC956C00DB4628 /* en */,
+				C0ABF81D1CDC95CA00DB4628 /* fr */,
+			);
+			name = imageen.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -467,6 +623,7 @@
 		};
 		C083E0791CCE47DE003E0665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DAF7D0D4E75885AA63C884B /* Pods-troiswaresto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = troiswaresto/Info.plist;
@@ -479,6 +636,7 @@
 		};
 		C083E07A1CCE47DE003E0665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = troiswaresto/Info.plist;
