@@ -244,3 +244,18 @@ func getImageFromFirebase(imageId : String, completionHandler:(image : UIImage?)
         }
     })
 }
+
+// MARK: - get user
+func getUserFronUserDefault() -> User? {
+    if let pwd = NSUserDefaults.standardUserDefaults().objectForKey("pwd"),
+        let nickname = NSUserDefaults.standardUserDefaults().objectForKey("nickname"),
+        let email = NSUserDefaults.standardUserDefaults().objectForKey("email"),
+        let userid = NSUserDefaults.standardUserDefaults().objectForKey("userid")
+    {
+        return User(nickname: nickname as! String, email: email as! String, password: pwd as! String, userId: userid as! String)
+    } else {
+        return nil
+    }
+}
+
+

@@ -21,6 +21,10 @@ class CreateProfileViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func saveButtonPressed(sender: UIButton) {
+        FirebaseHelper.createFirebaseUser(loginTextField.text!, nickName: nicknameTextField.text!, password: passwordTextField.text!)
+    }
+    
     func animateViewMoving (up:Bool, moveValue :CGFloat){
         let movementDuration:NSTimeInterval = 0.3
         let movement:CGFloat = ( up ? -moveValue : moveValue)
@@ -41,16 +45,5 @@ class CreateProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

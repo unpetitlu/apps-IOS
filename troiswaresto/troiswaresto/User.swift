@@ -6,6 +6,27 @@
 //  Copyright © 2016 ludo. All rights reserved.
 //
 
+import Foundation
+
 class User {
+    var nickname: String
+    var email: String
+    var password: String
+    var userId: String
     
+    init(nickname: String, email: String, password: String, userId: String) {
+        self.nickname = nickname
+        self.email = email
+        self.password = password
+        self.userId = userId
+    }
+    
+    func persistUser() {
+        // TODO : changer le nom des clefs pour éviter que les gens devinent
+        NSUserDefaults.standardUserDefaults().setObject(self.password, forKey: "pwd")
+        NSUserDefaults.standardUserDefaults().setObject(self.nickname, forKey: "nickname")
+        NSUserDefaults.standardUserDefaults().setObject(self.email, forKey: "email")
+        NSUserDefaults.standardUserDefaults().setObject(self.userId, forKey: "userid")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
 }

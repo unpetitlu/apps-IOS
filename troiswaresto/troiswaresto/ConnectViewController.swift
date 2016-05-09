@@ -18,6 +18,15 @@ class ConnectViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func connectButtonPressed(sender: UIButton) {
+        FirebaseHelper.logginFirebaseUser(loginTextField.text!, password: passwordTextField.text!) { success in
+            if success {
+                //simpleAlert("Hello", message: "Vous êtes connecté", view: self)
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

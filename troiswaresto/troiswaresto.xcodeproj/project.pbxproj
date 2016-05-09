@@ -35,6 +35,7 @@
 		C0ABF81A1CDC956C00DB4628 /* imageen.png in Resources */ = {isa = PBXBuildFile; fileRef = C0ABF81C1CDC956C00DB4628 /* imageen.png */; };
 		C0BC7BFB1CD247DC00E6F9B2 /* AddReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */; };
 		C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */; };
+		C0C01BD61CE0C71E0042E0B7 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */; };
 		DFD8675A07BD365AF7B0CC45 /* Pods_troiswaresto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB34ABA32659753A651D9592 /* Pods_troiswaresto.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		C0ABF81D1CDC95CA00DB4628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/imageen.png; sourceTree = "<group>"; };
 		C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewCell.swift; sourceTree = "<group>"; };
 		C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswaresto.release.xcconfig"; path = "Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +220,7 @@
 				C083E0841CCE482A003E0665 /* Review.swift */,
 				C083E0891CCE4B31003E0665 /* User.swift */,
 				C03DEE2B1CD0C5920094FBAB /* Model.swift */,
+				C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */,
 				C083E0511CCE47DE003E0665 /* AppDelegate.swift in Sources */,
 				C083E0831CCE4819003E0665 /* Resto.swift in Sources */,
+				C0C01BD61CE0C71E0042E0B7 /* FirebaseHelper.swift in Sources */,
 				C07BD9751CDCD40B00918F74 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
