@@ -6,6 +6,8 @@
 //  Copyright © 2016 ludo. All rights reserved.
 //
 
+import UIKit
+import CoreData
 import Foundation
 
 class User {
@@ -29,4 +31,34 @@ class User {
         NSUserDefaults.standardUserDefaults().setObject(self.userId, forKey: "userid")
         NSUserDefaults.standardUserDefaults().synchronize()
     }
+    
+    func persistUserWithCoreData() -> Bool {
+        // Récupère le controller appDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        // Récupère la variable managedObjectContext
+        let managedObjectContext = appDelegate.managedObjectContext
+        
+        // Récupère l'entité CoreDataUser
+        let entity = NSEntityDescription.entityForName("CoreDataUser", inManagedObjectContext: managedObjectContext)!
+        
+        // Créer un objet de CoreDataUser
+        let oneCoreDataUser = CoreDataUser(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
+        
+        oneCoreDataUser.email = self.email
+        oneCoreDataUser.nickname = self.nickname
+        oneCoreDataUser.password = self.password
+        oneCoreDataUser.uid = self.userId
+        
+        do {
+            // Sauvegarde de l'objet
+            try managedObjectContext.save()
+            return true
+            
+        } catch let error as NSError {
+            logError("Error to save:\(error.description)")
+            return false
+        }
+    }
+
 }

@@ -32,7 +32,7 @@ class Resto {
         return output
     }
     
-    func addReview(rate : Double, comment : String?, author : String?, completionHandler: (success:Bool) ->()) {
+    func addReview(rate : Double, comment : String?, author : String?, dateReview: String?, completionHandler: (success:Bool) ->()) {
         
         let nodeCurrentResto = Firebase(url: "\(ROOTFIREBASEURL)/data/restos/\(self.restoId)/reviews")
         let reviewRef = nodeCurrentResto.childByAutoId()
@@ -43,6 +43,10 @@ class Resto {
         
         if comment != nil {
             reviewRef.childByAppendingPath("comment").setValue("\(comment!)")
+        }
+        
+        if dateReview != nil {
+            reviewRef.childByAppendingPath("dateOfReview").setValue("\(dateReview!)")
         }
         
         reviewRef.childByAppendingPath("rate").setValue(rate) { (error, nodeRef) in

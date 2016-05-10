@@ -33,6 +33,11 @@
 		C0A273181CCFB5D700D5A0AE /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A273171CCFB5D700D5A0AE /* Pin.swift */; };
 		C0ABF8141CD9F5E900DB4628 /* AddRestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ABF8131CD9F5E900DB4628 /* AddRestoViewController.swift */; };
 		C0ABF81A1CDC956C00DB4628 /* imageen.png in Resources */ = {isa = PBXBuildFile; fileRef = C0ABF81C1CDC956C00DB4628 /* imageen.png */; };
+		C0B8D0761CE1DA720064A4F5 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0751CE1DA720064A4F5 /* CoreDataHelper.swift */; };
+		C0B8D0791CE1DAA50064A4F5 /* CoreDataUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0771CE1DAA50064A4F5 /* CoreDataUser+CoreDataProperties.swift */; };
+		C0B8D07A1CE1DAA50064A4F5 /* CoreDataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D0781CE1DAA50064A4F5 /* CoreDataUser.swift */; };
+		C0B8D07D1CE211FB0064A4F5 /* CoreDataReview+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D07B1CE211FB0064A4F5 /* CoreDataReview+CoreDataProperties.swift */; };
+		C0B8D07E1CE211FB0064A4F5 /* CoreDataReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8D07C1CE211FB0064A4F5 /* CoreDataReview.swift */; };
 		C0BC7BFB1CD247DC00E6F9B2 /* AddReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */; };
 		C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */; };
 		C0C01BD61CE0C71E0042E0B7 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */; };
@@ -95,6 +100,11 @@
 		C0ABF8161CDC94C300DB4628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C0ABF81B1CDC956C00DB4628 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/imageen.png; sourceTree = "<group>"; };
 		C0ABF81D1CDC95CA00DB4628 /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/imageen.png; sourceTree = "<group>"; };
+		C0B8D0751CE1DA720064A4F5 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		C0B8D0771CE1DAA50064A4F5 /* CoreDataUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0B8D0781CE1DAA50064A4F5 /* CoreDataUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUser.swift; sourceTree = "<group>"; };
+		C0B8D07B1CE211FB0064A4F5 /* CoreDataReview+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataReview+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C0B8D07C1CE211FB0064A4F5 /* CoreDataReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataReview.swift; sourceTree = "<group>"; };
 		C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewCell.swift; sourceTree = "<group>"; };
 		C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 		C03DEE2D1CD0C5C80094FBAB /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				C083E0871CCE4855003E0665 /* Utilities.swift */,
 				C03DEE2E1CD0C5D90094FBAB /* Parameters.swift */,
 			);
 			name = Config;
@@ -182,14 +193,16 @@
 				C03DEE2D1CD0C5C80094FBAB /* Config */,
 				C0A273141CCFAFF900D5A0AE /* View */,
 				C083E08F1CCE657A003E0665 /* Controller */,
-				C083E0871CCE4855003E0665 /* Utilities.swift */,
 				C083E0811CCE4809003E0665 /* Model */,
-				C083E0501CCE47DE003E0665 /* AppDelegate.swift */,
 				C083E0541CCE47DE003E0665 /* Main.storyboard */,
 				C083E05A1CCE47DE003E0665 /* Assets.xcassets */,
 				C083E05C1CCE47DE003E0665 /* LaunchScreen.storyboard */,
 				C083E05F1CCE47DE003E0665 /* Info.plist */,
 				C083E0571CCE47DE003E0665 /* troiswaresto.xcdatamodeld */,
+				C0B8D07B1CE211FB0064A4F5 /* CoreDataReview+CoreDataProperties.swift */,
+				C0B8D07C1CE211FB0064A4F5 /* CoreDataReview.swift */,
+				C0B8D0771CE1DAA50064A4F5 /* CoreDataUser+CoreDataProperties.swift */,
+				C0B8D0781CE1DAA50064A4F5 /* CoreDataUser.swift */,
 			);
 			path = troiswaresto;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 				C083E0891CCE4B31003E0665 /* User.swift */,
 				C03DEE2B1CD0C5920094FBAB /* Model.swift */,
 				C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */,
+				C0B8D0751CE1DA720064A4F5 /* CoreDataHelper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -237,6 +251,7 @@
 				C07BD9741CDCD40B00918F74 /* WelcomeViewController.swift */,
 				C07BD9761CDCD4D500918F74 /* CreateProfileViewController.swift */,
 				C07BD9781CDCD4E100918F74 /* ConnectViewController.swift */,
+				C083E0501CCE47DE003E0665 /* AppDelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -449,10 +464,12 @@
 				C083E08C1CCE534B003E0665 /* RestoViewController.swift in Sources */,
 				C083E0881CCE4855003E0665 /* Utilities.swift in Sources */,
 				C083E0851CCE482A003E0665 /* Review.swift in Sources */,
+				C0B8D0791CE1DAA50064A4F5 /* CoreDataUser+CoreDataProperties.swift in Sources */,
 				C0ABF8141CD9F5E900DB4628 /* AddRestoViewController.swift in Sources */,
 				C083E0531CCE47DE003E0665 /* MainViewController.swift in Sources */,
 				C03DEE2F1CD0C5D90094FBAB /* Parameters.swift in Sources */,
 				C083E08E1CCE55E4003E0665 /* CustomCell.swift in Sources */,
+				C0B8D0761CE1DA720064A4F5 /* CoreDataHelper.swift in Sources */,
 				C07BD9771CDCD4D500918F74 /* CreateProfileViewController.swift in Sources */,
 				C0A273181CCFB5D700D5A0AE /* Pin.swift in Sources */,
 				C03DEE2C1CD0C5920094FBAB /* Model.swift in Sources */,
@@ -460,11 +477,14 @@
 				C083E0591CCE47DE003E0665 /* troiswaresto.xcdatamodeld in Sources */,
 				C0A273161CCFB4A600D5A0AE /* MapViewController.swift in Sources */,
 				C083E08A1CCE4B31003E0665 /* User.swift in Sources */,
+				C0B8D07A1CE1DAA50064A4F5 /* CoreDataUser.swift in Sources */,
+				C0B8D07E1CE211FB0064A4F5 /* CoreDataReview.swift in Sources */,
 				C083E0911CCE6593003E0665 /* DetailViewController.swift in Sources */,
 				C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */,
 				C083E0511CCE47DE003E0665 /* AppDelegate.swift in Sources */,
 				C083E0831CCE4819003E0665 /* Resto.swift in Sources */,
 				C0C01BD61CE0C71E0042E0B7 /* FirebaseHelper.swift in Sources */,
+				C0B8D07D1CE211FB0064A4F5 /* CoreDataReview+CoreDataProperties.swift in Sources */,
 				C07BD9751CDCD40B00918F74 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

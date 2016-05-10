@@ -46,7 +46,11 @@ class FirebaseHelper {
                     
                     if let nickname = snapshot.value as? String {
                         let user = User(nickname: nickname, email: login, password: password, userId: uid)
+                        
+                        // Enregistrement dans NSDefault et dans coreData
                         user.persistUser()
+                        user.persistUserWithCoreData()
+                        
                         completionHandler(success: true)
                     } else {
                         logError("pas de user avec cet id")
@@ -56,5 +60,10 @@ class FirebaseHelper {
                 
             }
         }
+    }
+    
+    static func loggoutFirebaseUser() {
+        let ref = Firebase(url: "\(ROOTFIREBASEURL)/user")
+        ref.unauth();
     }
 }

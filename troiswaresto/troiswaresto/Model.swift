@@ -59,12 +59,16 @@ func getRestosInfoWithFirebase (view: UITableView, completion:(restos : [Resto])
                     if let rate = itemReview.value.objectForKey("rate") as? Double {
                         let reviewResto = Review(rate: rate)
                         
-                        if let comment = item.value.objectForKey("comment") as? String {
+                        if let comment = itemReview.value.objectForKey("comment") as? String {
                             reviewResto.comment = comment
                         }
                         
-                        if let nickname = item.value.objectForKey("nickname") as? String {
+                        if let nickname = itemReview.value.objectForKey("nickname") as? String {
                             reviewResto.nickname = nickname
+                        }
+                        
+                        if let dateReview = itemReview.value.objectForKey("dateOfReview") as? String {
+                            reviewResto.dateOfReview = dateReview
                         }
                         
                         resto.reviews.append(reviewResto)
@@ -132,6 +136,10 @@ func getRestosInfo(completionHandler : (restos : [Resto]) -> () )
                                 
                                 if let nickname = item["nickname"].string {
                                     reviewResto.nickname = nickname
+                                }
+                                
+                                if let dateReview = item["dateOfReview"].string {
+                                    reviewResto.dateOfReview = dateReview
                                 }
 
                                 resto.reviews.append(reviewResto)
@@ -246,7 +254,7 @@ func getImageFromFirebase(imageId : String, completionHandler:(image : UIImage?)
 }
 
 // MARK: - get user
-func getUserFronUserDefault() -> User? {
+func getUserFromUserDefault() -> User? {
     if let pwd = NSUserDefaults.standardUserDefaults().objectForKey("pwd"),
         let nickname = NSUserDefaults.standardUserDefaults().objectForKey("nickname"),
         let email = NSUserDefaults.standardUserDefaults().objectForKey("email"),

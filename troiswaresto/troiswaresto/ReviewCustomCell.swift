@@ -12,4 +12,5 @@ class ReviewCustomCell: UITableViewCell {
     @IBOutlet var rateLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var contentText: UILabel!
+    @IBOutlet var dateText: UILabel!
 }

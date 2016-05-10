@@ -287,4 +287,29 @@ extension String {
         }
         return output
     }
+    
+    var toAbsoluteDate : NSDate? {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = NSTimeZone(name: "UTC")
+        
+        if let date = formatter.dateFromString(self) {
+            return date
+        } else {
+            return nil
+        }
+    }
+}
+
+
+/**
+ * Renvoi une String avec la date en UTC
+ */
+extension NSDate {
+    var absoluteDateToString : String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = NSTimeZone(name: "UTC")
+        return formatter.stringFromDate(self)
+    }
 }

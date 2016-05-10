@@ -10,11 +10,93 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet var connectUserButton: UIButton!
+    @IBOutlet var createUserButton: UIButton!
+    @IBOutlet var logoutButton: UIButton!
+    @IBOutlet var userLabel: UILabel!
+    
+    @IBAction func logoutButtonPressed(sender: UIButton) {
+        FirebaseHelper.loggoutFirebaseUser()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Test de coreData : insert and select
+        /*
+        // Insert un utilisateur
+        let user = User(nickname: "test", email: "test@gmail.com", password: "azerty", userId: "1")
+        user.persistUserWithCoreData()
+
+        // Récupère tous les utilisateurs
+        if let users = CoreDataHelper.fetchAllUsers() {
+            for user in users {
+                print(user.nickname!)
+            }
+        }
+        
+        // Récupère un utilisateur
+        if let user = CoreDataHelper.fetchUser("1") {
+            print(user.nickname!)
+        }
+
+        if let users = CoreDataHelper.fetchAllUsers() {
+            for user in users {
+                print(user.nickname!)
+                
+                // as? Set<CoreDataReview> sur user.reviews car c'est un NSSET
+                if let reviews = user.reviews as? Set<CoreDataReview> {
+                    for review in reviews {
+                        print(review.rate!)
+                        print(review.user!.nickname!)
+                    }
+                }
+            }
+        }
+ 
+        if let user = CoreDataHelper.fetchOneUser() {
+            if let reviews = user.reviews as? Set<CoreDataReview> {
+                for review in reviews {
+                    print(review.rate!)
+                    print(review.user!.nickname!)
+                    print(review.dateOfReview)
+                }
+            }
+        }
+        */
+        
+        
+        // Test sur les date
+        /*
+        let now = NSDate()
+        print(now)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        let mydateString = dateFormatter.stringFromDate(now)
+        print(mydateString)
+        
+        let dateFormatter2 = NSDateFormatter()
+        dateFormatter2.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter2.timeStyle = NSDateFormatterStyle.ShortStyle
+        let date = dateFormatter2.dateFromString(mydateString)!
+        print(date)
+        */
+ 
 
         // Do any additional setup after loading the view.
-        logUserDefaultsWithFilter(nil)
+        //logUserDefaultsWithFilter(nil)
+        logoutButton.hidden = true
+        userLabel.hidden = true
+        if let user = getUserFromUserDefault() {
+            connectUserButton.hidden = true
+            createUserButton.hidden = true
+            userLabel.text = user.nickname
+            userLabel.hidden = false
+            logoutButton.hidden = false
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,15 +104,4 @@ class WelcomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

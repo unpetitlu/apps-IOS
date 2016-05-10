@@ -134,13 +134,24 @@ extension DetailViewController : UITableViewDelegate, UITableViewDataSource {
             cell.contentText.text = ""
         }
         
+        if let date = resto.reviews[indexPath.row].dateOfReview {
+            cell.dateText.text = date
+        } else {
+            cell.dateText.text = "no date"
+        }
+        
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        // Si je clique sur le + : c'est le dernier index du tableau
         if indexPath.row == resto.reviews.count {
-            performSegueWithIdentifier("addreview", sender: self)
+            if CoreDataHelper.fetchOneUser() != nil {
+                performSegueWithIdentifier("addreview", sender: self)
+            } else {
+                simpleAlert("Oups !", message: "Vous devez vous connecter pour écrire un commentaire", view: self)
+            }
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)

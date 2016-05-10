@@ -15,6 +15,7 @@ class ReviewViewController: UIViewController {
     
     var rateSlider = 10
     var resto : Resto!
+    var coreDataUser : CoreDataUser?
     
     @IBAction func changeValueRating(sender: UISlider!)
     {
@@ -26,18 +27,43 @@ class ReviewViewController: UIViewController {
     }
     
     @IBAction func addReviewButtonPressed() {
-        resto.addReview(Double(rateSlider), comment: commentText.text, author: authorText.text) { (success) in
+        /* DATE - AVANT UTILISATION DE L'EXTENSION
+        let now = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        let mydateString = dateFormatter.stringFromDate(now)
+        */
+        
+        // DATE - APRES UTILISATION DE L'EXTENSION
+        let mydateString = NSDate().absoluteDateToString
+
+        resto.addReview(Double(rateSlider), comment: commentText.text, author: authorText.text, dateReview: mydateString) { (success) in
             if success {
                 simpleAlert("Bravo !", message: "Votre commentaire a bien été ajouté", view: self)
+                
+                if self.coreDataUser != nil {
+                    // Ajout de la review dans le coreData
+                    let review = Review(rate: Double(self.rateSlider))
+                    review.comment = self.commentText.text
+                    review.nickname = self.authorText.text
+                    review.dateOfReview = mydateString
+                    review.persistReviewWithCoreData(self.coreDataUser!)
+                }
+                
             } else {
                 simpleAlert("Oups !", message: "Un problème est survenu", view: self)
             }
         }
+
     }
     
     
     func updateDisplay() {
-        
+        if let currentUser = CoreDataHelper.fetchOneUser() {
+            coreDataUser = currentUser
+            authorText.text = currentUser.nickname
+        }
     }
     
     override func viewDidLoad() {
