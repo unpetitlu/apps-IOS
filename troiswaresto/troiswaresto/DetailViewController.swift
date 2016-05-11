@@ -135,7 +135,7 @@ extension DetailViewController : UITableViewDelegate, UITableViewDataSource {
         }
         
         if let date = resto.reviews[indexPath.row].dateOfReview {
-            cell.dateText.text = date
+            cell.dateText.text = date.absoluteDateToString
         } else {
             cell.dateText.text = "no date"
         }

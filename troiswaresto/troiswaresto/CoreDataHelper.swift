@@ -93,4 +93,24 @@ class CoreDataHelper {
         }
     }
     
+    static func removeUser(user: CoreDataUser) -> Bool {
+        // Récupère le manageObjectContext
+        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let NSManageObjectUser = user as NSManagedObject
+        
+        //Fait la suppression (persit en Symfo)
+        managedObjectContext.deleteObject(NSManageObjectUser)
+        
+        do {
+            //Execute vraiment la suppression (flush en Symfo)
+            try managedObjectContext.save()
+            return true
+        } catch let error as NSError {
+            print("error to fetch all topics:\(error.description)")
+            return false
+        }
+
+    }
+    
 }

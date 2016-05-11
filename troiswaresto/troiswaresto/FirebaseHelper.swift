@@ -63,7 +63,20 @@ class FirebaseHelper {
     }
     
     static func loggoutFirebaseUser() {
-        let ref = Firebase(url: "\(ROOTFIREBASEURL)/user")
+        let ref = Firebase(url: "\(ROOTFIREBASEURL)")
         ref.unauth();
     }
+    
+    static func isConnected() {
+        let ref = Firebase(url: "\(ROOTFIREBASEURL)")
+        ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                print("oui")
+                print(authData)
+            } else {
+                print("non")
+            }
+        })
+    }
+
 }

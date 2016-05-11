@@ -68,7 +68,7 @@ func getRestosInfoWithFirebase (view: UITableView, completion:(restos : [Resto])
                         }
                         
                         if let dateReview = itemReview.value.objectForKey("dateOfReview") as? String {
-                            reviewResto.dateOfReview = dateReview
+                            reviewResto.dateOfReview = dateReview.toAbsoluteDate
                         }
                         
                         resto.reviews.append(reviewResto)
@@ -139,7 +139,7 @@ func getRestosInfo(completionHandler : (restos : [Resto]) -> () )
                                 }
                                 
                                 if let dateReview = item["dateOfReview"].string {
-                                    reviewResto.dateOfReview = dateReview
+                                    reviewResto.dateOfReview = dateReview.toAbsoluteDate
                                 }
 
                                 resto.reviews.append(reviewResto)

@@ -13,7 +13,7 @@ class Review {
     var rate : Double
     var comment : String?
     var nickname: String?
-    var dateOfReview: String?
+    var dateOfReview: NSDate?
     
     init(rate : Double) {
         self.rate = rate
@@ -42,9 +42,9 @@ class Review {
         let date = dateFormatter.dateFromString(self.dateOfReview!)
         */
         // DATE - APRES UTILISATION DE L'EXTENSION
-        let date = self.dateOfReview!.toAbsoluteDate
-        oneCoreDataReview.dateOfReview = date
+        //let date = self.dateOfReview!.toAbsoluteDate
         
+        oneCoreDataReview.dateOfReview = self.dateOfReview
         
         oneCoreDataReview.user = userReceived
         

@@ -17,6 +17,13 @@ class ReviewViewController: UIViewController {
     var resto : Resto!
     var coreDataUser : CoreDataUser?
     
+    // Fonction permettant de revenir sur la home
+    // Je lance le segue placé sur le bouton "exit : rouge" du controller
+    // Cela atterira sur la fonction dans le welcomeController
+    @IBAction func buttonBackHomePressed(sender: UIButton) {
+        performSegueWithIdentifier("unwindbacktohome", sender: self)
+    }
+    
     @IBAction func changeValueRating(sender: UISlider!)
     {
         rateSlider = Int(sender.value)
@@ -47,7 +54,7 @@ class ReviewViewController: UIViewController {
                     let review = Review(rate: Double(self.rateSlider))
                     review.comment = self.commentText.text
                     review.nickname = self.authorText.text
-                    review.dateOfReview = mydateString
+                    review.dateOfReview = mydateString.toAbsoluteDate
                     review.persistReviewWithCoreData(self.coreDataUser!)
                 }
                 

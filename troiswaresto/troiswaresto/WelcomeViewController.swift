@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class WelcomeViewController: UIViewController {
 
@@ -16,7 +17,22 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var userLabel: UILabel!
     
     @IBAction func logoutButtonPressed(sender: UIButton) {
+        //TODO: Refaire l'affichage lors de la connexion/deconnexion
+        
         FirebaseHelper.loggoutFirebaseUser()
+        if let user = CoreDataHelper.fetchOneUser() {
+            if CoreDataHelper.removeUser(user) {
+                simpleAlert("Bravo", message: "Vous êtes déconnecté", view: self)
+            } else {
+                simpleAlert("Oups", message: "Problème de connexion", view: self)
+            }
+        }
+    }
+    
+    // Fonction permettant de revenir en arrière sur plusieurs pages en même temps
+    // Cette fonction est à placer sur le controller d'arrivé
+    @IBAction func unwindBublingBackToHome(sender : UIStoryboardSegue) {
+        print("Welcome back to home");
     }
     
     override func viewDidLoad() {
@@ -83,13 +99,16 @@ class WelcomeViewController: UIViewController {
         let date = dateFormatter2.dateFromString(mydateString)!
         print(date)
         */
+        
+        // Permet de récupérer le User dans le NSUserDefault
+        //getUserFromUserDefault()
  
 
         // Do any additional setup after loading the view.
         //logUserDefaultsWithFilter(nil)
         logoutButton.hidden = true
         userLabel.hidden = true
-        if let user = getUserFromUserDefault() {
+        if let user = CoreDataHelper.fetchOneUser() {
             connectUserButton.hidden = true
             createUserButton.hidden = true
             userLabel.text = user.nickname
