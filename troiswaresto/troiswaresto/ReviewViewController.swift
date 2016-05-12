@@ -56,12 +56,20 @@ class ReviewViewController: UIViewController {
                     review.nickname = self.authorText.text
                     review.dateOfReview = mydateString.toAbsoluteDate
                     review.persistReviewWithCoreData(self.coreDataUser!)
+                    
+                    
+                    // Pour envoyer la notification
+                    // Broadcast à un autre controller
+                    // Permet d'envoyer des informations à un autre controller déjà existant (ouvert)
+                    NSNotificationCenter.defaultCenter().postNotificationName("reviewsubmitted", object: nil, userInfo: ["rating" : review.rate, "message" : 998])
                 }
                 
             } else {
                 simpleAlert("Oups !", message: "Un problème est survenu", view: self)
             }
         }
+        
+        
 
     }
     

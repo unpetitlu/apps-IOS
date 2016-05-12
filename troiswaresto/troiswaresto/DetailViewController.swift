@@ -74,6 +74,24 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Placement de l'écouteur. Dès qu'on lance "reviewsubmitted" il execute le code du "#selector"
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(notificationReceived), name: "reviewsubmitted", object: nil)
+    }
+    
+    // http://stackoverflow.com/questions/24049020/nsnotificationcenter-addobserver-in-swift
+    func notificationReceived(notification: NSNotification) {
+        logWarning("Notification received from WelcomeViewController")
+        
+        if notification.userInfo != nil {
+            if let myRating = notification.userInfo!["rate"] as? Double {
+                logWarning("and the rating was:\(myRating)")
+            }
+            
+            if let message = notification.userInfo!["message"] as? Double {
+                logWarning("and the message was:\(message)")
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

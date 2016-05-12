@@ -29,6 +29,7 @@
 		C083E08E1CCE55E4003E0665 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083E08D1CCE55E4003E0665 /* CustomCell.swift */; };
 		C083E0911CCE6593003E0665 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083E0901CCE6593003E0665 /* DetailViewController.swift */; };
 		C083E0931CCE710B003E0665 /* ReviewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083E0921CCE710B003E0665 /* ReviewCustomCell.swift */; };
+		C0885F8B1CE4865A00415410 /* AloneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0885F8A1CE4865A00415410 /* AloneViewController.swift */; };
 		C0A273161CCFB4A600D5A0AE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A273151CCFB4A600D5A0AE /* MapViewController.swift */; };
 		C0A273181CCFB5D700D5A0AE /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A273171CCFB5D700D5A0AE /* Pin.swift */; };
 		C0ABF8141CD9F5E900DB4628 /* AddRestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ABF8131CD9F5E900DB4628 /* AddRestoViewController.swift */; };
@@ -93,6 +94,7 @@
 		C083E08D1CCE55E4003E0665 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C083E0901CCE6593003E0665 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C083E0921CCE710B003E0665 /* ReviewCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCustomCell.swift; sourceTree = "<group>"; };
+		C0885F8A1CE4865A00415410 /* AloneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AloneViewController.swift; sourceTree = "<group>"; };
 		C0A273151CCFB4A600D5A0AE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C0A273171CCFB5D700D5A0AE /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		C0ABF8131CD9F5E900DB4628 /* AddRestoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestoViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewCell.swift; sourceTree = "<group>"; };
 		C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		C0CF38631CE47BBC00D4AD7E /* troiswaresto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "troiswaresto-Bridging-Header.h"; sourceTree = "<group>"; };
 		F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswaresto.release.xcconfig"; path = "Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +206,7 @@
 				C0B8D07C1CE211FB0064A4F5 /* CoreDataReview.swift */,
 				C0B8D0771CE1DAA50064A4F5 /* CoreDataUser+CoreDataProperties.swift */,
 				C0B8D0781CE1DAA50064A4F5 /* CoreDataUser.swift */,
+				C0CF38631CE47BBC00D4AD7E /* troiswaresto-Bridging-Header.h */,
 			);
 			path = troiswaresto;
 			sourceTree = "<group>";
@@ -252,6 +256,7 @@
 				C07BD9761CDCD4D500918F74 /* CreateProfileViewController.swift */,
 				C07BD9781CDCD4E100918F74 /* ConnectViewController.swift */,
 				C083E0501CCE47DE003E0665 /* AppDelegate.swift */,
+				C0885F8A1CE4865A00415410 /* AloneViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -345,6 +350,11 @@
 				TargetAttributes = {
 					C083E04C1CCE47DE003E0665 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C083E0631CCE47DE003E0665 = {
 						CreatedOnToolsVersion = 7.3;
@@ -461,6 +471,7 @@
 			files = (
 				C07BD9791CDCD4E100918F74 /* ConnectViewController.swift in Sources */,
 				C083E0931CCE710B003E0665 /* ReviewCustomCell.swift in Sources */,
+				C0885F8B1CE4865A00415410 /* AloneViewController.swift in Sources */,
 				C083E08C1CCE534B003E0665 /* RestoViewController.swift in Sources */,
 				C083E0881CCE4855003E0665 /* Utilities.swift in Sources */,
 				C083E0851CCE482A003E0665 /* Review.swift in Sources */,
@@ -650,11 +661,14 @@
 			baseConfigurationReference = 4DAF7D0D4E75885AA63C884B /* Pods-troiswaresto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = troiswaresto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ludo.troiswaresto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "troiswaresto/troiswaresto-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -663,11 +677,13 @@
 			baseConfigurationReference = F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = troiswaresto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ludo.troiswaresto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "troiswaresto/troiswaresto-Bridging-Header.h";
 			};
 			name = Release;
 		};

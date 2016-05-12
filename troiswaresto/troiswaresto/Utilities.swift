@@ -257,6 +257,56 @@ func simpleAlert(title: String, message: String, view: UIViewController, success
     
     view.presentViewController(alertController, animated: true, completion: nil)
 }
+// MARK: - Simple alert like a toast
+enum ToastStyle {
+    case FromTop
+    case FromBottom
+}
+
+func makeToast(myview: UIView, message: String, offset: CGFloat, withStyle toastStyle:ToastStyle ) {
+    let height: CGFloat = 40
+    let waitingTime = 2.0
+    
+    var startPosition = CGPoint()
+    var middlePosition = CGPoint()
+    
+    switch toastStyle {
+    case .FromTop:
+        startPosition = CGPoint(x: 10, y: -height)
+        middlePosition = CGPoint(x: 10, y: offset)
+    case .FromBottom:
+        startPosition = CGPoint(x: 10, y: realScreenHeight())
+        middlePosition = CGPoint(x: 10, y: realScreenHeight() - offset - height)
+        
+    }
+    let myToastView = UIView(frame: CGRectMake(startPosition.x, startPosition.y, realScreenWidth() - 20, height) )
+    
+    myToastView.backgroundColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+    
+    let myLabel = UILabel(frame: CGRectMake(2, 2, realScreenWidth() - 20 - 4, height - 4))
+    myLabel.text = message
+    myLabel.textAlignment = NSTextAlignment.Center
+    myLabel.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
+    
+    myToastView.addSubview(myLabel)
+    
+    myview.addSubview(myToastView)
+    myview.bringSubviewToFront(myToastView)
+    
+    UIView.animateWithDuration(1, delay: 0, options: [], animations: {
+        myToastView.frame = CGRectMake(middlePosition.x, middlePosition.y, realScreenWidth() - 20, height)
+        }, completion: nil)
+    
+    UIView.animateWithDuration(1, delay: waitingTime, options: [], animations: {
+        myToastView.frame = CGRectMake(startPosition.x, startPosition.y, realScreenWidth() - 20, height)
+        }, completion: {(Bool) in
+            myToastView.removeFromSuperview()
+    })
+}
+
+func makeToast(myview: UIView, message: String) {
+    makeToast(myview, message: message, offset: 10, withStyle: .FromBottom)
+}
 
 // MARK: - Extensions
 extension Int {

@@ -13,4 +13,7 @@ target 'troiswaresto' do
 
   #Firebase permet de faire du nosql
   pod 'Firebase', '>= 2.5.1'
+  
+  #OneSigne permet d'envoyer des notifications push
+  pod 'OneSignal'
 end

@@ -73,6 +73,15 @@ class AddRestoViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         alertController.addAction(cancelAction)
         
+        // à placer dans la fonction qui crée l'ActionSheet pour les photos
+        // Evite un problème sous iPad
+        if isIpad() {
+            if let popoverController = alertController.popoverPresentationController {
+                popoverController.sourceView = restoImage
+                popoverController.sourceRect = restoImage.bounds
+            }
+        }
+        
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     

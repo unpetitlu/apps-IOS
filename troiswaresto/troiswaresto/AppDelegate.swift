@@ -17,6 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // CODE AJOUTER PAR MOI : pour utiliser OneSigne => notification push
+        _ = OneSignal(launchOptions: launchOptions, appId: "edc8be15-3747-4e8f-8d28-f7747a9f8170") { (message, additionalData, isActive) in
+            NSLog("OneSignal Notification opened:\nMessage: %@", message)
+            
+            if additionalData != nil {
+                NSLog("additionalData: %@", additionalData)
+                // Check for and read any custom values you added to the notification
+                // This done with the "Additonal Data" section the dashbaord.
+                // OR setting the 'data' field on our REST API.
+                if let customKey = additionalData["customKey"] as! String? {
+                    NSLog("customKey: %@", customKey)
+                }
+            }
+        }
+        
+        OneSignal.defaultClient().enableInAppAlertNotification(true)
+        // FIN DU CODE AJOUTER PAR MOI : pour utiliser OneSigne => notification push
+
         return true
     }
 

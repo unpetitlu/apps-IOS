@@ -74,9 +74,17 @@
                                     <action selector="logoutButtonPressed:" destination="iWk-dk-n3W" eventType="touchUpInside" id="7d3-TR-myB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbz-6v-y5B">
+                                <rect key="frame" x="98" y="447" width="180" height="30"/>
+                                <state key="normal" title="Appeler le controller alone"/>
+                                <connections>
+                                    <action selector="callAloneViewController" destination="iWk-dk-n3W" eventType="touchUpInside" id="pgh-qr-jyc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nbz-6v-y5B" firstAttribute="centerX" secondItem="6y6-Zk-AVC" secondAttribute="centerX" id="66d-Dn-zSy"/>
                             <constraint firstItem="87h-Dp-tSZ" firstAttribute="centerX" secondItem="6y6-Zk-AVC" secondAttribute="centerX" id="6Qo-Gy-kfz"/>
                             <constraint firstItem="f6U-Fe-sVe" firstAttribute="top" secondItem="RC9-A3-aeY" secondAttribute="bottom" constant="10" id="8er-iq-SJu"/>
                             <constraint firstItem="ncP-eZ-tL3" firstAttribute="top" secondItem="RC9-A3-aeY" secondAttribute="bottom" constant="108" id="9Wh-gh-s9Y"/>
@@ -87,6 +95,7 @@
                             <constraint firstItem="Cxg-Q8-24b" firstAttribute="top" secondItem="RC9-A3-aeY" secondAttribute="bottom" constant="20" id="DgE-4I-6fi"/>
                             <constraint firstItem="ncP-eZ-tL3" firstAttribute="centerX" secondItem="6y6-Zk-AVC" secondAttribute="centerX" id="bQC-XA-Qyo"/>
                             <constraint firstItem="a7r-DU-frC" firstAttribute="top" secondItem="ncP-eZ-tL3" secondAttribute="bottom" constant="59" id="cOe-Y1-Rvc"/>
+                            <constraint firstItem="nbz-6v-y5B" firstAttribute="top" secondItem="g79-Gv-eEp" secondAttribute="bottom" constant="41" id="hbo-Dn-8K1"/>
                             <constraint firstAttribute="trailing" secondItem="Cxg-Q8-24b" secondAttribute="trailing" constant="20" id="iKb-yD-Ju7"/>
                             <constraint firstItem="a7r-DU-frC" firstAttribute="centerX" secondItem="6y6-Zk-AVC" secondAttribute="centerX" id="oqD-bk-MHe"/>
                             <constraint firstItem="9sI-Qk-RV5" firstAttribute="top" secondItem="a7r-DU-frC" secondAttribute="bottom" constant="30" id="xcv-BD-84Y"/>
@@ -98,6 +107,7 @@
                         <outlet property="connectUserButton" destination="87h-Dp-tSZ" id="uh5-4w-gtY"/>
                         <outlet property="createUserButton" destination="g79-Gv-eEp" id="4U5-Xy-QmZ"/>
                         <outlet property="logoutButton" destination="9sI-Qk-RV5" id="7KO-mX-861"/>
+                        <outlet property="myViewToast" destination="6y6-Zk-AVC" id="EpF-S2-1Fj"/>
                         <outlet property="userLabel" destination="a7r-DU-frC" id="hzZ-ej-y4f"/>
                     </connections>
                 </viewController>
@@ -216,7 +226,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1T-CS-rax" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="WQz-iQ-BsE"/>
             </objects>
-            <point key="canvasLocation" x="-731" y="1344"/>
+            <point key="canvasLocation" x="-392.5" y="1343.5"/>
+        </scene>
+        <!--Alone View Controller-->
+        <scene sceneID="t1T-P1-rlc">
+            <objects>
+                <viewController storyboardIdentifier="storyboardAloneDetail" id="HEw-sx-tpm" customClass="AloneViewController" customModule="troiswaresto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L0n-cc-lsK"/>
+                        <viewControllerLayoutGuide type="bottom" id="vOx-St-Hbd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VFb-Ov-vhm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-lm-GYZ">
+                                <rect key="frame" x="140" y="323" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J75-Bg-ngB">
+                                <rect key="frame" x="27" y="40" width="46" height="30"/>
+                                <state key="normal" title="Retour"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="HEw-sx-tpm" eventType="touchUpInside" id="jUN-32-fxb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r3w-lm-GYZ" firstAttribute="centerY" secondItem="VFb-Ov-vhm" secondAttribute="centerY" id="XIr-oh-Ohp"/>
+                            <constraint firstItem="J75-Bg-ngB" firstAttribute="top" secondItem="L0n-cc-lsK" secondAttribute="bottom" constant="20" id="ZoX-ma-Nnz"/>
+                            <constraint firstItem="J75-Bg-ngB" firstAttribute="leading" secondItem="VFb-Ov-vhm" secondAttribute="leading" constant="27" id="pDF-FD-DWk"/>
+                            <constraint firstItem="r3w-lm-GYZ" firstAttribute="centerX" secondItem="VFb-Ov-vhm" secondAttribute="centerX" id="rFD-QI-5bz"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77X-IW-bpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460.5" y="406.5"/>
         </scene>
         <!--Connect View Controller-->
         <scene sceneID="kS9-5i-OP0">
@@ -283,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vki-IA-Ai3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="1344"/>
+            <point key="canvasLocation" x="229.5" y="1343.5"/>
         </scene>
         <!--Resto View Controller-->
         <scene sceneID="l1w-9B-sss">

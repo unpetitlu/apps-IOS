@@ -16,6 +16,8 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var logoutButton: UIButton!
     @IBOutlet var userLabel: UILabel!
     
+    @IBOutlet var myViewToast : UIView!
+    
     @IBAction func logoutButtonPressed(sender: UIButton) {
         //TODO: Refaire l'affichage lors de la connexion/deconnexion
         
@@ -35,8 +37,22 @@ class WelcomeViewController: UIViewController {
         print("Welcome back to home");
     }
     
+    @IBAction func callAloneViewController() {
+        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let aloneViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("storyboardAloneDetail") as! AloneViewController
+        
+        // On peut envoyer des choses dans le controller
+        //let resto = Resto(restoId: restoId, name: "A la bonne bouffe", position: CLLocation(latitude: 0, longitude: 0))
+        //restoDetailController.resto = resto
+        
+        appDelegate.window?.makeKeyAndVisible()
+        appDelegate.window?.rootViewController!.presentViewController(aloneViewController, animated: false, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        makeToast(myViewToast, message: "coucou")
         
         // Test de coreData : insert and select
         /*
