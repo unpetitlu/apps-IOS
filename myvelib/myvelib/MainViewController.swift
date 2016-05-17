@@ -21,6 +21,9 @@ class MainViewController : UIViewController, CLLocationManagerDelegate {
     @IBOutlet var tableViewLabel : UILabel!
     @IBOutlet var activityIndicator : UIActivityIndicatorView!
     
+    @IBOutlet var progressLabel : UILabel!
+    @IBOutlet var progressBar : UIProgressView!
+    
     var stationsIds = [Int]()
     var myVelibStations = [VelibStation]()
     var allVelibStations = [VelibStation]()
@@ -172,7 +175,7 @@ class MainViewController : UIViewController, CLLocationManagerDelegate {
         // Ecriture raccourci
         activityIndicator.hidden = false
         activityIndicator.startAnimating()
-        getStationsInfo(stationsIds) { (stationsReceived : [VelibStation], allStations : [VelibStation]) in
+        getStationsInfo(self, stationsIds: stationsIds) { (stationsReceived : [VelibStation], allStations : [VelibStation]) in
             
             self.myVelibStations = stationsReceived
             self.allVelibStations = allStations

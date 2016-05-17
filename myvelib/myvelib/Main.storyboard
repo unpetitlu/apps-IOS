@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqH-1u-Mvk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AqH-1u-Mvk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -166,6 +166,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTA-sn-jBl">
+                                <rect key="frame" x="233" y="83" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beZ-a7-dQv">
+                                <rect key="frame" x="85" y="62" width="150" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921568627452" green="0.5490196078431373" blue="0.55294117647058827" alpha="0.84703663793103445" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -173,9 +182,11 @@
                             <constraint firstItem="8U4-Vj-Lo5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4RG-4c-dU9"/>
                             <constraint firstItem="RUa-3T-d95" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="7sW-P9-TR4"/>
                             <constraint firstItem="8U4-Vj-Lo5" firstAttribute="top" secondItem="hHI-uo-Z4O" secondAttribute="bottom" constant="10" id="H2L-ta-K6w"/>
+                            <constraint firstItem="fTA-sn-jBl" firstAttribute="leading" secondItem="8U4-Vj-Lo5" secondAttribute="trailing" constant="43" id="HZN-vE-XrR"/>
                             <constraint firstItem="nOi-sE-Qlb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="U9P-z0-dz8"/>
                             <constraint firstItem="RUa-3T-d95" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="WVX-83-405"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RUa-3T-d95" secondAttribute="bottom" id="XqZ-pQ-5GB"/>
+                            <constraint firstItem="fTA-sn-jBl" firstAttribute="centerY" secondItem="8U4-Vj-Lo5" secondAttribute="centerY" id="Y8t-JL-lTx"/>
                             <constraint firstItem="4dX-wK-XTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZhB-f8-tzn"/>
                             <constraint firstItem="hHI-uo-Z4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dqz-AS-n2A"/>
                             <constraint firstItem="4dX-wK-XTr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="fcR-yd-oaB"/>
@@ -198,6 +209,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="nOi-sE-Qlb" id="20m-CE-5Qr"/>
                         <outlet property="myTableView" destination="RUa-3T-d95" id="4R6-cX-md3"/>
+                        <outlet property="progressBar" destination="beZ-a7-dQv" id="rS6-IH-33G"/>
+                        <outlet property="progressLabel" destination="fTA-sn-jBl" id="Xw2-3O-b8Y"/>
                         <outlet property="tableViewLabel" destination="4dX-wK-XTr" id="osa-4f-7ao"/>
                         <outlet property="titleButton" destination="8U4-Vj-Lo5" id="rdv-6y-TAf"/>
                         <outlet property="titleLabel" destination="hHI-uo-Z4O" id="35r-fs-bj1"/>

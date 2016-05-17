@@ -12,7 +12,7 @@ import MapKit
 
 // Récupère l'intégralité des stations velib
 // completionHandler permet de créer une closure. Celle-ci retournera tous les velibs uniquement lorsque la requête asynchrone sera terminée
-func getStationsInfo(stationsIds: [Int], completionHandler : (stations : [VelibStation], allStations: [VelibStation]) -> () )
+func getStationsInfo(vc: MainViewController?, stationsIds: [Int], completionHandler : (stations : [VelibStation], allStations: [VelibStation]) -> () )
 {
     var output = [VelibStation]()
     var allStations = [VelibStation]()
@@ -23,10 +23,31 @@ func getStationsInfo(stationsIds: [Int], completionHandler : (stations : [VelibS
             
             if (error == nil) {
                 let json = JSON(data: data!)
-
-                for index in 0..<json.count {
-                    if let number = json[index]["number"].number {
-
+                
+                if vc != nil {
+                    vc!.progressLabel.text = "0"
+                    vc!.progressBar.progress = 0.0
+                }
+                
+                //code pour entourer ce que l'on veut mettre dans une thread secondaire
+                // La boucle for bloque l'utilisateur donc je met ça dans une thread secondaire
+                let myQueue = dispatch_queue_create("myQueue", nil)
+                dispatch_async(myQueue, {
+                    
+                    var counter = 0
+                
+                    for index in 0..<json.count {
+                        counter +=  1
+                        // Permet de faire une progress bar
+                        dispatch_async(dispatch_get_main_queue(), {
+                            if vc != nil {
+                                vc!.progressLabel.text = "\(counter)"
+                                vc!.progressBar.progress = Float(counter) / Float(json.count)
+                            }
+                        })
+                        
+                        if let number = json[index]["number"].number {
+                            
                             if  let available_bike_stands = json[index]["available_bike_stands"].number,
                                 let available_bikes = json[index]["available_bikes"].number,
                                 let name = json[index]["name"].string,
@@ -43,15 +64,24 @@ func getStationsInfo(stationsIds: [Int], completionHandler : (stations : [VelibS
                                 
                             } else {
                                 sendAnalyticsEvent("error-request-api-velib", parameters: ["errorAPI" : "values"])
+                            }
                         }
                     }
-                }
+                    
+                    //code à mettre autour de ce que l'on veut effectuer dans la main thread
+                    // typiquement une mise à jour de l'affichage ou de la progression de l'opération
+                    // Je retourne le résultat dans la thread principale
+                    dispatch_async(dispatch_get_main_queue(), {
+                        
+                        // Retourne la closure lorsque la requête asynchrone se termine
+                        completionHandler(stations: output, allStations: allStations)
+                        
+                    })
+                })
+                
             } else {
                 sendAnalyticsEvent("error-request-api-velib", parameters: ["errorAPI" : "request"])
             }
-            
-            // Retourne la closure lorsque la requête asynchrone se termine
-            completionHandler(stations: output, allStations: allStations)
             
     }
     

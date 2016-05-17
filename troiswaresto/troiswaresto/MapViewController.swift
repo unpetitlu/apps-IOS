@@ -163,7 +163,7 @@ class MapViewController: UIViewController {
     
     // cette fonction écoute le changement de position du user
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
+        // manager.location! => permet de récupérer la position du user
         if let locationUser = manager.location {
             
             //Si je viens de la page detail d'un resto alors je me centre sur celui-ci au lieu de me centrer sur l'utilisateur

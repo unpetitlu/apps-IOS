@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import Firebase
 
-class RestoViewController: UIViewController {
+class RestoViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var restoTableView : UITableView!
     var refreshControl: UIRefreshControl!
@@ -18,6 +18,8 @@ class RestoViewController: UIViewController {
     @IBOutlet var backButton: UIButton!
     
     var restos = [Resto]()
+    let locationManager = CLLocationManager()
+    //var userPosition = CLLocation?
     
     @IBAction func backButtonPressed() {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -38,6 +40,11 @@ class RestoViewController: UIViewController {
         // Récupération des restos en utilisant Firebase
         getRestosInfoWithFirebase(restoTableView) { (restosReceived: [Resto]) in
             self.restos = restosReceived
+            /*
+            for oneResto in self.restos {
+                oneResto.distanceToUser = oneResto.setDistanceToUser(userPosition)
+            }
+            */
             self.restoTableView.reloadData()
         }
 
@@ -95,9 +102,27 @@ class RestoViewController: UIViewController {
     func translateText() {
         backButton.setTitle("main.button.back".translate, forState: .Normal)
     }
+    
+    
+    // permet de localiser l'utilisateur en lui posant la question que l'on retrouve dans le Info.plist
+    func showUserLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    // cette fonction écoute le changement de position du user
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // manager.location! => permet de récupérer la position du user
+        //userPosition = manager.location!
+        locationManager.stopUpdatingLocation() // Stop l'écoute
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showUserLocation()
         
         translateText()
         

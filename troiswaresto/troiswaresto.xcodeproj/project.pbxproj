@@ -42,6 +42,7 @@
 		C0BC7BFB1CD247DC00E6F9B2 /* AddReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFA1CD247DC00E6F9B2 /* AddReviewCell.swift */; };
 		C0BC7BFD1CD24B9300E6F9B2 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */; };
 		C0C01BD61CE0C71E0042E0B7 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */; };
+		C0F8AD3D1CE5E38700B91A18 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F8AD3C1CE5E38700B91A18 /* CreateAccount.storyboard */; };
 		DFD8675A07BD365AF7B0CC45 /* Pods_troiswaresto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB34ABA32659753A651D9592 /* Pods_troiswaresto.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		C0BC7BFC1CD24B9300E6F9B2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C0C01BD51CE0C71E0042E0B7 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		C0CF38631CE47BBC00D4AD7E /* troiswaresto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "troiswaresto-Bridging-Header.h"; sourceTree = "<group>"; };
+		C0F8AD3C1CE5E38700B91A18 /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 		F460BA5436EEE924DA08F462 /* Pods-troiswaresto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswaresto.release.xcconfig"; path = "Pods/Target Support Files/Pods-troiswaresto/Pods-troiswaresto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 				C083E08F1CCE657A003E0665 /* Controller */,
 				C083E0811CCE4809003E0665 /* Model */,
 				C083E0541CCE47DE003E0665 /* Main.storyboard */,
+				C0F8AD3C1CE5E38700B91A18 /* CreateAccount.storyboard */,
 				C083E05A1CCE47DE003E0665 /* Assets.xcassets */,
 				C083E05C1CCE47DE003E0665 /* LaunchScreen.storyboard */,
 				C083E05F1CCE47DE003E0665 /* Info.plist */,
@@ -394,6 +397,7 @@
 			files = (
 				C07BD9701CDC9C1200918F74 /* Localizable.strings in Resources */,
 				C0ABF81A1CDC956C00DB4628 /* imageen.png in Resources */,
+				C0F8AD3D1CE5E38700B91A18 /* CreateAccount.storyboard in Resources */,
 				C083E05E1CCE47DE003E0665 /* LaunchScreen.storyboard in Resources */,
 				C083E05B1CCE47DE003E0665 /* Assets.xcassets in Resources */,
 				C083E0561CCE47DE003E0665 /* Main.storyboard in Resources */,

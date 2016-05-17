@@ -18,6 +18,7 @@ class Resto {
     var image: UIImage?
     var priceRange: PriceRange?
     var address: String?
+    var distanceToUser : CLLocationDistance?
     var rating: Double {
         var output = 0.0
         
@@ -59,6 +60,12 @@ class Resto {
         
     }
     
+    // Calcul la distance entre un resto et la position de l'utilisateur
+    func setDistanceToUser(userPosition: CLLocation)
+    {
+        self.distanceToUser = userPosition.distanceFromLocation(self.position)
+    }
+    
     init(restoId: String, name: String, position: CLLocation) {
         self.restoId = restoId
         self.name = name
@@ -69,9 +76,14 @@ class Resto {
 func addRestoToFireBase(name: String, address: String, position: CLLocation, restoImage: String?, description : String, completionHandler: (success:Bool) ->()) {
     
     // TODO : insérer le nom et si tout marche bien j'insère les autres
-    
     let nodeCurrentResto = Firebase(url: "\(ROOTFIREBASEURL)/data/restos")
     let reviewChild = nodeCurrentResto.childByAutoId()
+    
+    // Ajout d'un auteur pour la sécurité de Firebase
+    if let user = CoreDataHelper.fetchOneUser() {
+        reviewChild.childByAppendingPath("author").setValue(user.uid)
+    }
+    
     
     reviewChild.childByAppendingPath("address").setValue(address)
     reviewChild.childByAppendingPath("description").setValue(description)
@@ -89,6 +101,7 @@ func addRestoToFireBase(name: String, address: String, position: CLLocation, res
             completionHandler(success: true)
         }
     }
+    
 }
 
 func deleteRestoToFireBase(idResto: String) {
