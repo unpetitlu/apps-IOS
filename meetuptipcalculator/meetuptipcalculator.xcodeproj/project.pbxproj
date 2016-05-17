@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3747408E1CE9C24100AAAFAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747408D1CE9C24100AAAFAC /* AppDelegate.swift */; };
+		374740931CE9C24100AAAFAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374740911CE9C24100AAAFAC /* Main.storyboard */; };
+		374740951CE9C24100AAAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374740941CE9C24100AAAFAC /* Assets.xcassets */; };
+		3747409A1CE9C60700AAAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EEFE361CE4EB2D00E2BF44 /* Assets.xcassets */; };
+		3747409B1CE9C66D00AAAFAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEFE311CE4EB2D00E2BF44 /* ViewController.swift */; };
+		3747409D1CE9D1F000AAAFAC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEFE411CE4F4AE00E2BF44 /* CalculatorViewController.swift */; };
+		37EEFE301CE4EB2D00E2BF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEFE2F1CE4EB2D00E2BF44 /* AppDelegate.swift */; };
+		37EEFE321CE4EB2D00E2BF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEFE311CE4EB2D00E2BF44 /* ViewController.swift */; };
+		37EEFE351CE4EB2D00E2BF44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EEFE331CE4EB2D00E2BF44 /* Main.storyboard */; };
+		37EEFE371CE4EB2D00E2BF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EEFE361CE4EB2D00E2BF44 /* Assets.xcassets */; };
+		37EEFE3A1CE4EB2D00E2BF44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EEFE381CE4EB2D00E2BF44 /* LaunchScreen.storyboard */; };
+		37EEFE421CE4F4AE00E2BF44 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EEFE411CE4F4AE00E2BF44 /* CalculatorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3747408B1CE9C24100AAAFAC /* meetuptipcalculatorTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meetuptipcalculatorTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3747408D1CE9C24100AAAFAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		374740921CE9C24100AAAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		374740941CE9C24100AAAFAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		374740961CE9C24100AAAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37EEFE2C1CE4EB2D00E2BF44 /* meetuptipcalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meetuptipcalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37EEFE2F1CE4EB2D00E2BF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37EEFE311CE4EB2D00E2BF44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37EEFE341CE4EB2D00E2BF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37EEFE361CE4EB2D00E2BF44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37EEFE391CE4EB2D00E2BF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37EEFE3B1CE4EB2D00E2BF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37EEFE411CE4F4AE00E2BF44 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		374740881CE9C24100AAAFAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37EEFE291CE4EB2D00E2BF44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3747408C1CE9C24100AAAFAC /* meetuptipcalculatorTV */ = {
+			isa = PBXGroup;
+			children = (
+				3747408D1CE9C24100AAAFAC /* AppDelegate.swift */,
+				374740911CE9C24100AAAFAC /* Main.storyboard */,
+				374740941CE9C24100AAAFAC /* Assets.xcassets */,
+				374740961CE9C24100AAAFAC /* Info.plist */,
+			);
+			path = meetuptipcalculatorTV;
+			sourceTree = "<group>";
+		};
+		37EEFE231CE4EB2D00E2BF44 = {
+			isa = PBXGroup;
+			children = (
+				37EEFE2E1CE4EB2D00E2BF44 /* meetuptipcalculator */,
+				3747408C1CE9C24100AAAFAC /* meetuptipcalculatorTV */,
+				37EEFE2D1CE4EB2D00E2BF44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37EEFE2D1CE4EB2D00E2BF44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37EEFE2C1CE4EB2D00E2BF44 /* meetuptipcalculator.app */,
+				3747408B1CE9C24100AAAFAC /* meetuptipcalculatorTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37EEFE2E1CE4EB2D00E2BF44 /* meetuptipcalculator */ = {
+			isa = PBXGroup;
+			children = (
+				37EEFE2F1CE4EB2D00E2BF44 /* AppDelegate.swift */,
+				37EEFE311CE4EB2D00E2BF44 /* ViewController.swift */,
+				37EEFE331CE4EB2D00E2BF44 /* Main.storyboard */,
+				37EEFE361CE4EB2D00E2BF44 /* Assets.xcassets */,
+				37EEFE381CE4EB2D00E2BF44 /* LaunchScreen.storyboard */,
+				37EEFE3B1CE4EB2D00E2BF44 /* Info.plist */,
+				37EEFE411CE4F4AE00E2BF44 /* CalculatorViewController.swift */,
+			);
+			path = meetuptipcalculator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3747408A1CE9C24100AAAFAC /* meetuptipcalculatorTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374740991CE9C24100AAAFAC /* Build configuration list for PBXNativeTarget "meetuptipcalculatorTV" */;
+			buildPhases = (
+				374740871CE9C24100AAAFAC /* Sources */,
+				374740881CE9C24100AAAFAC /* Frameworks */,
+				374740891CE9C24100AAAFAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = meetuptipcalculatorTV;
+			productName = meetuptipcalculatorTV;
+			productReference = 3747408B1CE9C24100AAAFAC /* meetuptipcalculatorTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37EEFE2B1CE4EB2D00E2BF44 /* meetuptipcalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37EEFE3E1CE4EB2D00E2BF44 /* Build configuration list for PBXNativeTarget "meetuptipcalculator" */;
+			buildPhases = (
+				37EEFE281CE4EB2D00E2BF44 /* Sources */,
+				37EEFE291CE4EB2D00E2BF44 /* Frameworks */,
+				37EEFE2A1CE4EB2D00E2BF44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = meetuptipcalculator;
+			productName = meetuptipcalculator;
+			productReference = 37EEFE2C1CE4EB2D00E2BF44 /* meetuptipcalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37EEFE241CE4EB2D00E2BF44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = nicolas;
+				TargetAttributes = {
+					3747408A1CE9C24100AAAFAC = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					37EEFE2B1CE4EB2D00E2BF44 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 37EEFE271CE4EB2D00E2BF44 /* Build configuration list for PBXProject "meetuptipcalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37EEFE231CE4EB2D00E2BF44;
+			productRefGroup = 37EEFE2D1CE4EB2D00E2BF44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37EEFE2B1CE4EB2D00E2BF44 /* meetuptipcalculator */,
+				3747408A1CE9C24100AAAFAC /* meetuptipcalculatorTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		374740891CE9C24100AAAFAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374740951CE9C24100AAAFAC /* Assets.xcassets in Resources */,
+				3747409A1CE9C60700AAAFAC /* Assets.xcassets in Resources */,
+				374740931CE9C24100AAAFAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37EEFE2A1CE4EB2D00E2BF44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EEFE3A1CE4EB2D00E2BF44 /* LaunchScreen.storyboard in Resources */,
+				37EEFE371CE4EB2D00E2BF44 /* Assets.xcassets in Resources */,
+				37EEFE351CE4EB2D00E2BF44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		374740871CE9C24100AAAFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3747409B1CE9C66D00AAAFAC /* ViewController.swift in Sources */,
+				3747409D1CE9D1F000AAAFAC /* CalculatorViewController.swift in Sources */,
+				3747408E1CE9C24100AAAFAC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37EEFE281CE4EB2D00E2BF44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EEFE321CE4EB2D00E2BF44 /* ViewController.swift in Sources */,
+				37EEFE421CE4F4AE00E2BF44 /* CalculatorViewController.swift in Sources */,
+				37EEFE301CE4EB2D00E2BF44 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		374740911CE9C24100AAAFAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				374740921CE9C24100AAAFAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37EEFE331CE4EB2D00E2BF44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37EEFE341CE4EB2D00E2BF44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37EEFE381CE4EB2D00E2BF44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37EEFE391CE4EB2D00E2BF44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		374740971CE9C24100AAAFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = meetuptipcalculatorTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.meetuptipcalculatorTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		374740981CE9C24100AAAFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = meetuptipcalculatorTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.meetuptipcalculatorTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		37EEFE3C1CE4EB2D00E2BF44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37EEFE3D1CE4EB2D00E2BF44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37EEFE3F1CE4EB2D00E2BF44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = meetuptipcalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.meetuptipcalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37EEFE401CE4EB2D00E2BF44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = meetuptipcalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.meetuptipcalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		374740991CE9C24100AAAFAC /* Build configuration list for PBXNativeTarget "meetuptipcalculatorTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374740971CE9C24100AAAFAC /* Debug */,
+				374740981CE9C24100AAAFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		37EEFE271CE4EB2D00E2BF44 /* Build configuration list for PBXProject "meetuptipcalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37EEFE3C1CE4EB2D00E2BF44 /* Debug */,
+				37EEFE3D1CE4EB2D00E2BF44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37EEFE3E1CE4EB2D00E2BF44 /* Build configuration list for PBXNativeTarget "meetuptipcalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37EEFE3F1CE4EB2D00E2BF44 /* Debug */,
+				37EEFE401CE4EB2D00E2BF44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37EEFE241CE4EB2D00E2BF44 /* Project object */;
+}

@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  troiswresto
+
+  Created by nicolas on 06/05/2016.
+  Copyright © 2016 nicolas. All rights reserved.
+*/
+
+"cancel" = "Annuler";
+
+"addresto.getapicture" = "Ajouter une photo à ce resto";
+"addresto.takeapicture" = "Prendre une photo";
+"addresto.usecameraroll" = "Choisir dans la bibliothèque";
+"addresto.takeapicture" = "Prendre une photo";
+"addresto.restocreated" = "Resto créé";
+"addresto.incomplete" = "Saisie incomplète";
+"addresto.typeaname" = "Saisir le nom du resto";
+
+"addresto.cheap" = "€ : de 4 à 6 euros";
+"addresto.medium" = "€€ : de 6 à 10 euros";
+"addresto.expensive" = "€€€ : plus de 10 euros";
+"addresto.pricerange" = "Gamme de prix";
+
+"addresto.description" = "Description";
+"addresto.name" = "Nom";
+"addresto.saveresto" = "Enregistrer";
+"addresto.addaresto" = "Ajouter un resto";
+"addresto.restonameplaceholder" = "Nom du resto";
+
+"welcome.next" = "Suivant";
+"welcome.ignore" = "Ignorer";
+
+"notloggedin" = "Non connecté";
+"loggedin" = "Connecté";

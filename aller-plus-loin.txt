@@ -1,0 +1,29 @@
+# Formation développeur mobile iOS
+# Pour aller plus loin
+
+En fonction de vos besoins, voici quelques lectures et tutoriels qui pourront être utiles.
+
+### Style guide
+Le [Swift style guide](https://github.com/raywenderlich/swift-style-guide/blob/master/README.markdown) de Ray Wenderlich.
+
+### Grand Central Dispatch
+Un tuto pour aller plus loin sur le multithreading et [Grand Central Dispatch](https://www.raywenderlich.com/79149/grand-central-dispatch-tutorial-swift-part-1).
+
+### Design Patterns
+Plus avancé, un document en deux parties sur les [Design Patterns](https://www.raywenderlich.com/86477/introducing-ios-design-patterns-in-swift-part-1) en Swift.
+
+### Functional programming
+Pour creuser la question du [Functional Programing](https://www.raywenderlich.com/82599/swift-functional-programming-tutorial).
+
+### InApp purchases
+
+Toujours chez [Ray Wenderlich](https://www.raywenderlich.com/122144/in-app-purchase-tutorial).
+
+Ou bien celui-là : [http://www.techotopia.com/index.php/An_iOS_8_Swift_In-App_Purchase_Tutorial](http://www.techotopia.com/index.php/An_iOS_8_Swift_In-App_Purchase_Tutorial)
+
+### CollectionViews
+Les CollectionViews sont similaires aux TableViews et également pas mal utilisées. Voici un [tuto](https://www.raywenderlich.com/78550/beginning-ios-collection-views-swift-part-1).
+
+### Textes formattés
+Vous pouvez formatter du texte **à l'intérieur** d'une ``String``. Ce sont les ``NSAttributedString``.
+La syntaxe est assez lourde. Pas de tuto particulier sur ce sujet, mais StackOverflow vous aidera.

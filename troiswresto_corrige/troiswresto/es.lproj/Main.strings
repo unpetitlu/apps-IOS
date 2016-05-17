@@ -1,0 +1,111 @@
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "016-Qq-JaF"; */
+"016-Qq-JaF.text" = "0.0";
+
+/* Class = "UILabel"; text = "Le Serbe"; ObjectID = "2ZJ-6C-mjV"; */
+"2ZJ-6C-mjV.text" = "Le Serbe";
+
+/* Class = "UILabel"; text = "Le Serbe"; ObjectID = "3z8-eL-yrL"; */
+"3z8-eL-yrL.text" = "Le Serbe";
+
+/* Class = "UILabel"; text = "Nom du resto"; ObjectID = "4Bi-Kw-fwL"; */
+"4Bi-Kw-fwL.text" = "Nom du resto";
+
+/* Class = "UINavigationItem"; title = "Restos"; ObjectID = "4yi-r4-lnt"; */
+"4yi-r4-lnt.title" = "Restos";
+
+/* Class = "UINavigationItem"; title = "Positionner le resto"; ObjectID = "67d-Z5-uGR"; */
+"67d-Z5-uGR.title" = "Positionner le resto";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7QR-Tv-sbL"; */
+"7QR-Tv-sbL.text" = "Label";
+
+/* Class = "UILabel"; text = "Ajouter avis"; ObjectID = "7tw-pc-ty6"; */
+"7tw-pc-ty6.text" = "Ajouter avis";
+
+/* Class = "UILabel"; text = "nickname"; ObjectID = "82O-Pb-rj5"; */
+"82O-Pb-rj5.text" = "nickname";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "8iL-Ow-2dP"; */
+"8iL-Ow-2dP.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Adresse"; ObjectID = "AkO-Km-Pr8"; */
+"AkO-Km-Pr8.text" = "Adresse";
+
+/* Class = "UIButton"; normalTitle = "Envoyer"; ObjectID = "Dtq-Ac-9ZE"; */
+"Dtq-Ac-9ZE.normalTitle" = "Envoyer";
+
+/* Class = "UIButton"; normalTitle = "Restos"; ObjectID = "G0v-zD-zRb"; */
+"G0v-zD-zRb.normalTitle" = "Restos";
+
+/* Class = "UIButton"; normalTitle = "Ajouter"; ObjectID = "G4c-2T-Fb6"; */
+"G4c-2T-Fb6.normalTitle" = "Ajouter";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "NBZ-ov-hcb"; */
+"NBZ-ov-hcb.text" = "0.0";
+
+/* Class = "UINavigationItem"; title = "Fiche resto"; ObjectID = "NYV-kl-I1E"; */
+"NYV-kl-I1E.title" = "Fiche resto";
+
+/* Class = "UISegmentedControl"; RAY-SS-sgB.segmentTitles[0] = "Note"; ObjectID = "RAY-SS-sgB"; */
+"RAY-SS-sgB.segmentTitles[0]" = "Note";
+
+/* Class = "UISegmentedControl"; RAY-SS-sgB.segmentTitles[1] = "Distance"; ObjectID = "RAY-SS-sgB"; */
+"RAY-SS-sgB.segmentTitles[1]" = "Distance";
+
+/* Class = "UISegmentedControl"; RAY-SS-sgB.segmentTitles[2] = "Prix"; ObjectID = "RAY-SS-sgB"; */
+"RAY-SS-sgB.segmentTitles[2]" = "Prix";
+
+/* Class = "UIButton"; normalTitle = "Ajouter le resto"; ObjectID = "TC8-kv-9Hd"; */
+"TC8-kv-9Hd.normalTitle" = "Ajouter le resto";
+
+/* Class = "UILabel"; text = "Nom du resto"; ObjectID = "W7n-Ul-fNj"; */
+"W7n-Ul-fNj.text" = "Nom du resto";
+
+/* Class = "UITextField"; placeholder = "Nom du resto"; ObjectID = "Zhs-bs-Huo"; */
+"Zhs-bs-Huo.placeholder" = "Nom du resto";
+
+/* Class = "UILabel"; text = "Gamme de prix"; ObjectID = "ZtG-Yb-VdM"; */
+"ZtG-Yb-VdM.text" = "Gamme de prix";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bIO-VC-aMQ"; */
+"bIO-VC-aMQ.text" = "Label";
+
+/* Class = "UILabel"; text = "3W Restos"; ObjectID = "dIg-d3-aEy"; */
+"dIg-d3-aEy.text" = "3W Restos";
+
+/* Class = "UILabel"; text = "Votre avis :"; ObjectID = "dSI-zN-m5Z"; */
+"dSI-zN-m5Z.text" = "Votre avis :";
+
+/* Class = "UILabel"; text = "€ : Pas cher"; ObjectID = "fgE-g0-d64"; */
+"fgE-g0-d64.text" = "€ : Pas cher";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "ln9-cC-ybp"; */
+"ln9-cC-ybp.text" = "Address";
+
+/* Class = "UILabel"; text = "Le basque"; ObjectID = "qJl-QD-OgK"; */
+"qJl-QD-OgK.text" = "Le basque";
+
+/* Class = "UILabel"; text = "Note : 00 / 10"; ObjectID = "qht-nJ-4k8"; */
+"qht-nJ-4k8.text" = "Note : 00 / 10";
+
+/* Class = "UINavigationItem"; title = "Add a review"; ObjectID = "qqa-0Y-BLZ"; */
+"qqa-0Y-BLZ.title" = "Add a review";
+
+/* Class = "UINavigationItem"; title = "Ajouter un resto"; ObjectID = "rZC-eq-VWe"; */
+"rZC-eq-VWe.title" = "Ajouter un resto";
+
+/* Class = "UILabel"; text = "Description du resto"; ObjectID = "szH-Dl-vJQ"; */
+"szH-Dl-vJQ.text" = "Description du resto";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "v6L-8O-Whc"; */
+"v6L-8O-Whc.text" = "Rating";
+
+/* Class = "UILabel"; text = "price"; ObjectID = "w3B-fw-IXX"; */
+"w3B-fw-IXX.text" = "price";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xI5-ur-qtQ"; */
+"xI5-ur-qtQ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "3W Restos"; ObjectID = "y8k-yP-Gh6"; */
+"y8k-yP-Gh6.title" = "3W Restos";

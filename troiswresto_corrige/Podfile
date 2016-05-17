@@ -1,0 +1,11 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'troiswresto' do
+pod 'Firebase', '>= 2.5.1'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'Alamofire','~> 3.3'
+
+pod 'OneSignal'
+
+end

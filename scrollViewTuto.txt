@@ -1,0 +1,18 @@
+# Formation développeur mobile iOS
+# ScrollView entièrement en StoryBoard
+Pour réaliser en StoryBoard une ScrollView qui regroupe verticalement plusieurs objets.
+
+* Ajouter une ScrollView dans la vue principale que l'on va appeler ``View``.
+* Caler la ScrollView sur les 4 bords
+* Ajouter une Vue dans la ScrollView. On peut renommer cette vue ``ContainerView``.
+* Caler la ContainerView sur les 4 bords.
+* **Important** : ajouter la contrainte : ``ContainerView equal width View``.
+* **Important** : ajouter la contrainte : ``ContainerView equal height View``.
+* **Important** : à cette dernière contrainte, appliquer une priorité low
+* Ajouter les éléments d'interface dans la ``Container View``.
+*  **Important** Caler le bloc d'élément en **haut et en bas**. Ce qui est contraire à ce que l'on fait d'habitude.
+
+Et voilà.
+
+La ScrollView a plusieurs options, tester ``Paging Enabled`` et ``bounces``.
+On peut également modifier la taille de la vue globale telle qu'elle apparaît dans Interface Builder de façon à bien voir tous les éléments d'interface.

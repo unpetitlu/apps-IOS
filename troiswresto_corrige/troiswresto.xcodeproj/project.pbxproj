@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3705F90B1CDC921C0001DDEB /* imageen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3705F90D1CDC921C0001DDEB /* imageen.png */; };
+		3705F9131CDC98F40001DDEB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3705F9151CDC98F40001DDEB /* Localizable.strings */; };
+		3705F91B1CDC9F590001DDEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3705F91A1CDC9F590001DDEB /* InfoPlist.strings */; };
+		37502CE01CE0F0E900CB4099 /* CoredataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37502CDF1CE0F0E900CB4099 /* CoredataHelper.swift */; };
+		3768B95E1CE1D24100DFBB16 /* CoreDataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768B95C1CE1D24100DFBB16 /* CoreDataUser.swift */; };
+		3768B9631CE1F38F00DFBB16 /* CoreDataReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768B9611CE1F38F00DFBB16 /* CoreDataReview.swift */; };
+		3768B96A1CE1F52B00DFBB16 /* CoreDataUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768B9681CE1F52B00DFBB16 /* CoreDataUser+CoreDataProperties.swift */; };
+		3768B96B1CE1F52B00DFBB16 /* CoreDataReview+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768B9691CE1F52B00DFBB16 /* CoreDataReview+CoreDataProperties.swift */; };
+		379EC2501CCF59A7007144FC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EC24F1CCF59A7007144FC /* MapViewController.swift */; };
+		379EC2521CCF5A2C007144FC /* RestoPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EC2511CCF5A2C007144FC /* RestoPin.swift */; };
+		379EC2541CCF95D9007144FC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EC2531CCF95D9007144FC /* Model.swift */; };
+		379EC2561CCFB7D3007144FC /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EC2551CCFB7D3007144FC /* FirebaseHelper.swift */; };
+		379EC2581CD110F9007144FC /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EC2571CD110F9007144FC /* AddReviewViewController.swift */; };
+		37C491F41CD8CD330015F72D /* AddRestoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C491F31CD8CD330015F72D /* AddRestoViewController.swift */; };
+		37D5F2671CDCD023004C762F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5F2661CDCD023004C762F /* WelcomeViewController.swift */; };
+		37D5F2691CDCD02E004C762F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5F2681CDCD02E004C762F /* LoginViewController.swift */; };
+		37D5F26B1CDCD034004C762F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5F26A1CDCD034004C762F /* CreateAccountViewController.swift */; };
+		37D5F26D1CDCDB1D004C762F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5F26C1CDCDB1D004C762F /* User.swift */; };
+		37D6C6371CCE48A700DAD59A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6361CCE48A700DAD59A /* AppDelegate.swift */; };
+		37D6C63C1CCE48A700DAD59A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D6C63A1CCE48A700DAD59A /* Main.storyboard */; };
+		37D6C63F1CCE48A700DAD59A /* troiswresto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C63D1CCE48A700DAD59A /* troiswresto.xcdatamodeld */; };
+		37D6C6411CCE48A700DAD59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D6C6401CCE48A700DAD59A /* Assets.xcassets */; };
+		37D6C6441CCE48A700DAD59A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D6C6421CCE48A700DAD59A /* LaunchScreen.storyboard */; };
+		37D6C64F1CCE48A700DAD59A /* troiswrestoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C64E1CCE48A700DAD59A /* troiswrestoTests.swift */; };
+		37D6C65A1CCE48A700DAD59A /* troiswrestoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6591CCE48A700DAD59A /* troiswrestoUITests.swift */; };
+		37D6C6681CCE48C000DAD59A /* Resto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6671CCE48C000DAD59A /* Resto.swift */; };
+		37D6C66A1CCE4AFD00DAD59A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6691CCE4AFD00DAD59A /* Review.swift */; };
+		37D6C66F1CCE51C500DAD59A /* RestosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C66E1CCE51C500DAD59A /* RestosViewController.swift */; };
+		37D6C6711CCE52F400DAD59A /* RestoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6701CCE52F400DAD59A /* RestoCell.swift */; };
+		37D6C6761CCE552400DAD59A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6751CCE552400DAD59A /* Utilities.swift */; };
+		37D6C6781CCE555800DAD59A /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6771CCE555800DAD59A /* Parameters.swift */; };
+		37D6C67A1CCE60A300DAD59A /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C6791CCE60A300DAD59A /* ReviewCell.swift */; };
+		37D6C67C1CCE60F700DAD59A /* RestoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6C67B1CCE60F700DAD59A /* RestoDetailViewController.swift */; };
+		7C6F93E18C47040F2EEF2DB7 /* Pods_troiswresto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C090329003258488B3CFCCB2 /* Pods_troiswresto.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37D6C64B1CCE48A700DAD59A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D6C62B1CCE48A700DAD59A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D6C6321CCE48A700DAD59A;
+			remoteInfo = troiswresto;
+		};
+		37D6C6561CCE48A700DAD59A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D6C62B1CCE48A700DAD59A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D6C6321CCE48A700DAD59A;
+			remoteInfo = troiswresto;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3705F90C1CDC921C0001DDEB /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/imageen.png; sourceTree = "<group>"; };
+		3705F90E1CDC92340001DDEB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		3705F90F1CDC92340001DDEB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3705F9101CDC92810001DDEB /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/imageen.png; sourceTree = "<group>"; };
+		3705F9141CDC98F40001DDEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3705F9161CDC98F80001DDEB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3705F9171CDC9ADE0001DDEB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		3705F9181CDC9ADE0001DDEB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3705F9191CDC9ADE0001DDEB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3705F91A1CDC9F590001DDEB /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		374552D91CD34C7100294258 /* troiswresto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "troiswresto-Bridging-Header.h"; sourceTree = "<group>"; };
+		37502CDF1CE0F0E900CB4099 /* CoredataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataHelper.swift; sourceTree = "<group>"; };
+		3768B95C1CE1D24100DFBB16 /* CoreDataUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUser.swift; sourceTree = "<group>"; };
+		3768B95F1CE1EC7900DFBB16 /* v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.xcdatamodel; sourceTree = "<group>"; };
+		3768B9611CE1F38F00DFBB16 /* CoreDataReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataReview.swift; sourceTree = "<group>"; };
+		3768B9681CE1F52B00DFBB16 /* CoreDataUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3768B9691CE1F52B00DFBB16 /* CoreDataReview+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataReview+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		379EC24F1CCF59A7007144FC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		379EC2511CCF5A2C007144FC /* RestoPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoPin.swift; sourceTree = "<group>"; };
+		379EC2531CCF95D9007144FC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		379EC2551CCFB7D3007144FC /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		379EC2571CD110F9007144FC /* AddReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		37C491F31CD8CD330015F72D /* AddRestoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestoViewController.swift; sourceTree = "<group>"; };
+		37D5F2661CDCD023004C762F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		37D5F2681CDCD02E004C762F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37D5F26A1CDCD034004C762F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		37D5F26C1CDCDB1D004C762F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		37D6C6331CCE48A700DAD59A /* troiswresto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = troiswresto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D6C6361CCE48A700DAD59A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37D6C63B1CCE48A700DAD59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37D6C63E1CCE48A700DAD59A /* troiswresto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = troiswresto.xcdatamodel; sourceTree = "<group>"; };
+		37D6C6401CCE48A700DAD59A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37D6C6431CCE48A700DAD59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37D6C6451CCE48A700DAD59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D6C64A1CCE48A700DAD59A /* troiswrestoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = troiswrestoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D6C64E1CCE48A700DAD59A /* troiswrestoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = troiswrestoTests.swift; sourceTree = "<group>"; };
+		37D6C6501CCE48A700DAD59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D6C6551CCE48A700DAD59A /* troiswrestoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = troiswrestoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D6C6591CCE48A700DAD59A /* troiswrestoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = troiswrestoUITests.swift; sourceTree = "<group>"; };
+		37D6C65B1CCE48A700DAD59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D6C6671CCE48C000DAD59A /* Resto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resto.swift; sourceTree = "<group>"; };
+		37D6C6691CCE4AFD00DAD59A /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		37D6C66E1CCE51C500DAD59A /* RestosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestosViewController.swift; sourceTree = "<group>"; };
+		37D6C6701CCE52F400DAD59A /* RestoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoCell.swift; sourceTree = "<group>"; };
+		37D6C6751CCE552400DAD59A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		37D6C6771CCE555800DAD59A /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		37D6C6791CCE60A300DAD59A /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		37D6C67B1CCE60F700DAD59A /* RestoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoDetailViewController.swift; sourceTree = "<group>"; };
+		74D9A8DB4BC66BCFA67305B1 /* Pods-troiswresto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswresto.release.xcconfig"; path = "Pods/Target Support Files/Pods-troiswresto/Pods-troiswresto.release.xcconfig"; sourceTree = "<group>"; };
+		BD8331169908155B16D50FC1 /* Pods-troiswresto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-troiswresto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-troiswresto/Pods-troiswresto.debug.xcconfig"; sourceTree = "<group>"; };
+		C090329003258488B3CFCCB2 /* Pods_troiswresto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_troiswresto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37D6C6301CCE48A700DAD59A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C6F93E18C47040F2EEF2DB7 /* Pods_troiswresto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D6C6471CCE48A700DAD59A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D6C6521CCE48A700DAD59A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		233C7C8E7D52A0192E264187 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD8331169908155B16D50FC1 /* Pods-troiswresto.debug.xcconfig */,
+				74D9A8DB4BC66BCFA67305B1 /* Pods-troiswresto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3705F90A1CDC92040001DDEB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3705F90D1CDC921C0001DDEB /* imageen.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		37D6C62A1CCE48A700DAD59A = {
+			isa = PBXGroup;
+			children = (
+				37D6C6351CCE48A700DAD59A /* troiswresto */,
+				37D6C64D1CCE48A700DAD59A /* troiswrestoTests */,
+				37D6C6581CCE48A700DAD59A /* troiswrestoUITests */,
+				37D6C6341CCE48A700DAD59A /* Products */,
+				233C7C8E7D52A0192E264187 /* Pods */,
+				D745ED730C3DF24ABA8246AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37D6C6341CCE48A700DAD59A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D6C6331CCE48A700DAD59A /* troiswresto.app */,
+				37D6C64A1CCE48A700DAD59A /* troiswrestoTests.xctest */,
+				37D6C6551CCE48A700DAD59A /* troiswrestoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37D6C6351CCE48A700DAD59A /* troiswresto */ = {
+			isa = PBXGroup;
+			children = (
+				3705F9151CDC98F40001DDEB /* Localizable.strings */,
+				3705F90A1CDC92040001DDEB /* Images */,
+				37D6C66B1CCE4B1400DAD59A /* Model */,
+				37D6C6731CCE548E00DAD59A /* View */,
+				37D6C6721CCE546900DAD59A /* Controllers */,
+				37D6C6741CCE550C00DAD59A /* Supporting Files */,
+				37D6C6401CCE48A700DAD59A /* Assets.xcassets */,
+				37D6C6451CCE48A700DAD59A /* Info.plist */,
+				37D6C63D1CCE48A700DAD59A /* troiswresto.xcdatamodeld */,
+				374552D91CD34C7100294258 /* troiswresto-Bridging-Header.h */,
+			);
+			path = troiswresto;
+			sourceTree = "<group>";
+		};
+		37D6C64D1CCE48A700DAD59A /* troiswrestoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3705F91A1CDC9F590001DDEB /* InfoPlist.strings */,
+				37D6C64E1CCE48A700DAD59A /* troiswrestoTests.swift */,
+				37D6C6501CCE48A700DAD59A /* Info.plist */,
+			);
+			path = troiswrestoTests;
+			sourceTree = "<group>";
+		};
+		37D6C6581CCE48A700DAD59A /* troiswrestoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37D6C6591CCE48A700DAD59A /* troiswrestoUITests.swift */,
+				37D6C65B1CCE48A700DAD59A /* Info.plist */,
+			);
+			path = troiswrestoUITests;
+			sourceTree = "<group>";
+		};
+		37D6C66B1CCE4B1400DAD59A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37D6C6671CCE48C000DAD59A /* Resto.swift */,
+				37D6C6691CCE4AFD00DAD59A /* Review.swift */,
+				379EC2531CCF95D9007144FC /* Model.swift */,
+				37D5F26C1CDCDB1D004C762F /* User.swift */,
+				379EC2551CCFB7D3007144FC /* FirebaseHelper.swift */,
+				37502CDF1CE0F0E900CB4099 /* CoredataHelper.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		37D6C6721CCE546900DAD59A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37C491F31CD8CD330015F72D /* AddRestoViewController.swift */,
+				379EC2571CD110F9007144FC /* AddReviewViewController.swift */,
+				37D6C6361CCE48A700DAD59A /* AppDelegate.swift */,
+				379EC24F1CCF59A7007144FC /* MapViewController.swift */,
+				37D6C67B1CCE60F700DAD59A /* RestoDetailViewController.swift */,
+				37D6C66E1CCE51C500DAD59A /* RestosViewController.swift */,
+				37D5F2661CDCD023004C762F /* WelcomeViewController.swift */,
+				37D5F2681CDCD02E004C762F /* LoginViewController.swift */,
+				37D5F26A1CDCD034004C762F /* CreateAccountViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		37D6C6731CCE548E00DAD59A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D6C63A1CCE48A700DAD59A /* Main.storyboard */,
+				37D6C6421CCE48A700DAD59A /* LaunchScreen.storyboard */,
+				37D6C6701CCE52F400DAD59A /* RestoCell.swift */,
+				37D6C6791CCE60A300DAD59A /* ReviewCell.swift */,
+				379EC2511CCF5A2C007144FC /* RestoPin.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		37D6C6741CCE550C00DAD59A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D6C6751CCE552400DAD59A /* Utilities.swift */,
+				37D6C6771CCE555800DAD59A /* Parameters.swift */,
+				3768B95C1CE1D24100DFBB16 /* CoreDataUser.swift */,
+				3768B9611CE1F38F00DFBB16 /* CoreDataReview.swift */,
+				3768B9681CE1F52B00DFBB16 /* CoreDataUser+CoreDataProperties.swift */,
+				3768B9691CE1F52B00DFBB16 /* CoreDataReview+CoreDataProperties.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D745ED730C3DF24ABA8246AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C090329003258488B3CFCCB2 /* Pods_troiswresto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37D6C6321CCE48A700DAD59A /* troiswresto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D6C65E1CCE48A700DAD59A /* Build configuration list for PBXNativeTarget "troiswresto" */;
+			buildPhases = (
+				18F8E1A68DB11017FBF0E4BE /* Check Pods Manifest.lock */,
+				37D6C62F1CCE48A700DAD59A /* Sources */,
+				37D6C6301CCE48A700DAD59A /* Frameworks */,
+				37D6C6311CCE48A700DAD59A /* Resources */,
+				7E90EDC8D60D6A75F43DFCB6 /* Embed Pods Frameworks */,
+				7FB90698CB9A8D5E1125C70C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = troiswresto;
+			productName = troiswresto;
+			productReference = 37D6C6331CCE48A700DAD59A /* troiswresto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37D6C6491CCE48A700DAD59A /* troiswrestoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D6C6611CCE48A700DAD59A /* Build configuration list for PBXNativeTarget "troiswrestoTests" */;
+			buildPhases = (
+				37D6C6461CCE48A700DAD59A /* Sources */,
+				37D6C6471CCE48A700DAD59A /* Frameworks */,
+				37D6C6481CCE48A700DAD59A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D6C64C1CCE48A700DAD59A /* PBXTargetDependency */,
+			);
+			name = troiswrestoTests;
+			productName = troiswrestoTests;
+			productReference = 37D6C64A1CCE48A700DAD59A /* troiswrestoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37D6C6541CCE48A700DAD59A /* troiswrestoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D6C6641CCE48A700DAD59A /* Build configuration list for PBXNativeTarget "troiswrestoUITests" */;
+			buildPhases = (
+				37D6C6511CCE48A700DAD59A /* Sources */,
+				37D6C6521CCE48A700DAD59A /* Frameworks */,
+				37D6C6531CCE48A700DAD59A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D6C6571CCE48A700DAD59A /* PBXTargetDependency */,
+			);
+			name = troiswrestoUITests;
+			productName = troiswrestoUITests;
+			productReference = 37D6C6551CCE48A700DAD59A /* troiswrestoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37D6C62B1CCE48A700DAD59A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = nicolas;
+				TargetAttributes = {
+					37D6C6321CCE48A700DAD59A = {
+						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					37D6C6491CCE48A700DAD59A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 37D6C6321CCE48A700DAD59A;
+					};
+					37D6C6541CCE48A700DAD59A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 37D6C6321CCE48A700DAD59A;
+					};
+				};
+			};
+			buildConfigurationList = 37D6C62E1CCE48A700DAD59A /* Build configuration list for PBXProject "troiswresto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+				es,
+			);
+			mainGroup = 37D6C62A1CCE48A700DAD59A;
+			productRefGroup = 37D6C6341CCE48A700DAD59A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37D6C6321CCE48A700DAD59A /* troiswresto */,
+				37D6C6491CCE48A700DAD59A /* troiswrestoTests */,
+				37D6C6541CCE48A700DAD59A /* troiswrestoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37D6C6311CCE48A700DAD59A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3705F9131CDC98F40001DDEB /* Localizable.strings in Resources */,
+				3705F90B1CDC921C0001DDEB /* imageen.png in Resources */,
+				37D6C6441CCE48A700DAD59A /* LaunchScreen.storyboard in Resources */,
+				37D6C6411CCE48A700DAD59A /* Assets.xcassets in Resources */,
+				37D6C63C1CCE48A700DAD59A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D6C6481CCE48A700DAD59A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3705F91B1CDC9F590001DDEB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D6C6531CCE48A700DAD59A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18F8E1A68DB11017FBF0E4BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E90EDC8D60D6A75F43DFCB6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-troiswresto/Pods-troiswresto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FB90698CB9A8D5E1125C70C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-troiswresto/Pods-troiswresto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37D6C62F1CCE48A700DAD59A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D5F26B1CDCD034004C762F /* CreateAccountViewController.swift in Sources */,
+				37D6C66F1CCE51C500DAD59A /* RestosViewController.swift in Sources */,
+				3768B9631CE1F38F00DFBB16 /* CoreDataReview.swift in Sources */,
+				37D6C67A1CCE60A300DAD59A /* ReviewCell.swift in Sources */,
+				379EC2581CD110F9007144FC /* AddReviewViewController.swift in Sources */,
+				37D6C66A1CCE4AFD00DAD59A /* Review.swift in Sources */,
+				37D5F2691CDCD02E004C762F /* LoginViewController.swift in Sources */,
+				379EC2561CCFB7D3007144FC /* FirebaseHelper.swift in Sources */,
+				37D6C67C1CCE60F700DAD59A /* RestoDetailViewController.swift in Sources */,
+				37C491F41CD8CD330015F72D /* AddRestoViewController.swift in Sources */,
+				37D6C63F1CCE48A700DAD59A /* troiswresto.xcdatamodeld in Sources */,
+				37D6C6371CCE48A700DAD59A /* AppDelegate.swift in Sources */,
+				37502CE01CE0F0E900CB4099 /* CoredataHelper.swift in Sources */,
+				3768B96A1CE1F52B00DFBB16 /* CoreDataUser+CoreDataProperties.swift in Sources */,
+				379EC2501CCF59A7007144FC /* MapViewController.swift in Sources */,
+				3768B95E1CE1D24100DFBB16 /* CoreDataUser.swift in Sources */,
+				37D6C6711CCE52F400DAD59A /* RestoCell.swift in Sources */,
+				37D5F2671CDCD023004C762F /* WelcomeViewController.swift in Sources */,
+				379EC2541CCF95D9007144FC /* Model.swift in Sources */,
+				37D6C6761CCE552400DAD59A /* Utilities.swift in Sources */,
+				379EC2521CCF5A2C007144FC /* RestoPin.swift in Sources */,
+				37D6C6681CCE48C000DAD59A /* Resto.swift in Sources */,
+				37D6C6781CCE555800DAD59A /* Parameters.swift in Sources */,
+				3768B96B1CE1F52B00DFBB16 /* CoreDataReview+CoreDataProperties.swift in Sources */,
+				37D5F26D1CDCDB1D004C762F /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D6C6461CCE48A700DAD59A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D6C64F1CCE48A700DAD59A /* troiswrestoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D6C6511CCE48A700DAD59A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D6C65A1CCE48A700DAD59A /* troiswrestoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37D6C64C1CCE48A700DAD59A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D6C6321CCE48A700DAD59A /* troiswresto */;
+			targetProxy = 37D6C64B1CCE48A700DAD59A /* PBXContainerItemProxy */;
+		};
+		37D6C6571CCE48A700DAD59A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D6C6321CCE48A700DAD59A /* troiswresto */;
+			targetProxy = 37D6C6561CCE48A700DAD59A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3705F90D1CDC921C0001DDEB /* imageen.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3705F90C1CDC921C0001DDEB /* en */,
+				3705F9101CDC92810001DDEB /* fr */,
+			);
+			name = imageen.png;
+			sourceTree = "<group>";
+		};
+		3705F9151CDC98F40001DDEB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3705F9141CDC98F40001DDEB /* en */,
+				3705F9161CDC98F80001DDEB /* fr */,
+				3705F9191CDC9ADE0001DDEB /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		37D6C63A1CCE48A700DAD59A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D6C63B1CCE48A700DAD59A /* Base */,
+				3705F90E1CDC92340001DDEB /* fr */,
+				3705F9171CDC9ADE0001DDEB /* es */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37D6C6421CCE48A700DAD59A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D6C6431CCE48A700DAD59A /* Base */,
+				3705F90F1CDC92340001DDEB /* fr */,
+				3705F9181CDC9ADE0001DDEB /* es */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37D6C65C1CCE48A700DAD59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37D6C65D1CCE48A700DAD59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37D6C65F1CCE48A700DAD59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD8331169908155B16D50FC1 /* Pods-troiswresto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = troiswresto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.troiswrestos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "troiswresto/troiswresto-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37D6C6601CCE48A700DAD59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D9A8DB4BC66BCFA67305B1 /* Pods-troiswresto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = troiswresto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.troiswrestos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "troiswresto/troiswresto-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		37D6C6621CCE48A700DAD59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = troiswrestoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.troiswrestoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/troiswresto.app/troiswresto";
+			};
+			name = Debug;
+		};
+		37D6C6631CCE48A700DAD59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = troiswrestoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.troiswrestoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/troiswresto.app/troiswresto";
+			};
+			name = Release;
+		};
+		37D6C6651CCE48A700DAD59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = troiswrestoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.troiswrestoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = troiswresto;
+			};
+			name = Debug;
+		};
+		37D6C6661CCE48A700DAD59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = troiswrestoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.lehovetzki.troiswrestoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = troiswresto;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37D6C62E1CCE48A700DAD59A /* Build configuration list for PBXProject "troiswresto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D6C65C1CCE48A700DAD59A /* Debug */,
+				37D6C65D1CCE48A700DAD59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D6C65E1CCE48A700DAD59A /* Build configuration list for PBXNativeTarget "troiswresto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D6C65F1CCE48A700DAD59A /* Debug */,
+				37D6C6601CCE48A700DAD59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D6C6611CCE48A700DAD59A /* Build configuration list for PBXNativeTarget "troiswrestoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D6C6621CCE48A700DAD59A /* Debug */,
+				37D6C6631CCE48A700DAD59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D6C6641CCE48A700DAD59A /* Build configuration list for PBXNativeTarget "troiswrestoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D6C6651CCE48A700DAD59A /* Debug */,
+				37D6C6661CCE48A700DAD59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		37D6C63D1CCE48A700DAD59A /* troiswresto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3768B95F1CE1EC7900DFBB16 /* v1.xcdatamodel */,
+				37D6C63E1CCE48A700DAD59A /* troiswresto.xcdatamodel */,
+			);
+			currentVersion = 37D6C63E1CCE48A700DAD59A /* troiswresto.xcdatamodel */;
+			path = troiswresto.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 37D6C62B1CCE48A700DAD59A /* Project object */;
+}
